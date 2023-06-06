@@ -1,0 +1,9 @@
+[{
+    "moduleName": "vpc",
+    "type": "Vpc"
+},
+{
+"moduleName": "subnet",
+"type": "Subnet"
+}
+]
