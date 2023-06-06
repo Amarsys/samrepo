@@ -1,0 +1,36 @@
+[{
+    "moduleName": "subnet",
+    "variableName": "cidr_block",
+    "type": "Subnet",
+    "mappingFieldName": "cidrBlock",
+    "get_value_from_module_output": false
+},
+{
+    "moduleName": "subnet",
+    "variableName": "map_public_ip_on_launch",
+    "type": "Subnet",
+    "mappingFieldName": "mapPublicIpOnLaunch",
+    "get_value_from_module_output": false
+},
+{
+    "moduleName": "subnet",
+    "variableName": "vpc_id",
+    "type": "Subnet",
+    "mappingFieldName": "module.vpc.id",
+    "get_value_from_module_output": true
+
+},
+{
+    "moduleName": "subnet",
+    "variableName": "az",
+    "type": "Subnet",
+    "mappingFieldName": "availabilityZoneId",
+    "get_value_from_module_output": false
+},
+{
+    "moduleName": "subnet",
+    "variableName": "tags",
+    "type": "Subnet",
+    "mappingFieldName": "tags",
+    "get_value_from_module_output": false
+}]

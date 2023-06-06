@@ -1,0 +1,12 @@
+[{
+    "moduleName": "vpc",
+    "variableName": "vpc_cidr",
+    "type": "Vpc",
+    "mappingFieldName": "cidrBlock"
+},
+{
+    "moduleName": "vpc",
+    "variableName": "tags",
+    "type": "Vpc",
+    "mappingFieldName": "tags"
+}]
