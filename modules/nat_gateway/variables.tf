@@ -1,8 +1,3 @@
-variable "az" {
-  type        = string
-  description = "Availability zone"
-}
-
 variable "tags" {
   type        = map(any)
   description = "map of tags"

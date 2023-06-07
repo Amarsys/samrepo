@@ -1,9 +1,9 @@
-output "subnet_id" {
+output "id" {
   value       = aws_subnet.subnet.id
   description = "The ID of the subnet"
 }
 
-output "subnet_arn" {
+output "arn" {
   value       = aws_subnet.subnet.arn
   description = "The ARN of the subnet"
 }

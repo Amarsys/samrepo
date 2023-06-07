@@ -1,0 +1,23 @@
+[
+    {
+        "moduleName": "nat_route_table",
+        "variableName": "nat_gateway_id",
+        "type": "RouteTable",
+        "mappingFieldName": "module.nat_gateway.id",
+        "get_value_from_module_output": true
+    },
+    {
+        "moduleName": "nat_route_table",
+        "variableName": "vpc_id",
+        "type": "RouteTable",
+        "mappingFieldName": "module.vpc.id",
+        "get_value_from_module_output": true
+    },
+    {
+        "moduleName": "nat_route_table",
+        "variableName": "tags",
+        "type": "RouteTable",
+        "mappingFieldName": ".[0].dataObject.tags",
+        "get_value_from_module_output": false
+    }
+]
