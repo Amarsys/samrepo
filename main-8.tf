@@ -1,10 +1,10 @@
-module "Subnet" {
+module "Subnet_18" {
   cidr_block              = "172.31.64.0/20"
   map_public_ip_on_launch = true
   az                      = "use1-az5"
 }
 
-module "Subnet" {
+module "Subnet_19" {
   cidr_block              = "192.168.160.0/19"
   map_public_ip_on_launch = false
   az                      = "use1-az2"
@@ -21,7 +21,7 @@ module "Subnet" {
   }
 }
 
-module "Subnet" {
+module "Subnet_20" {
   cidr_block              = "192.168.128.0/19"
   map_public_ip_on_launch = false
   az                      = "use1-az1"
