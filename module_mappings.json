@@ -1,9 +1,1 @@
-[{
-    "moduleName": "vpc",
-    "type": "Vpc"
-},
-{
-"moduleName": "subnet",
-"type": "Subnet"
-}
-]
+[["moduleName": "vpc","type": "Vpc"],["moduleName": "subnet","type": "Subnet"]]
