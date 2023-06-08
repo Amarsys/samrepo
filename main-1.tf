@@ -1,8 +1,8 @@
-module "Vpc" {
+module "Vpc_1" {
   vpc_cidr = "172.31.0.0/16"
 }
 
-module "Vpc" {
+module "Vpc_2" {
   vpc_cidr = "192.168.0.0/16"
   tags     = {
     aws:cloudformation:logical-id = "VPC"
@@ -16,7 +16,7 @@ module "Vpc" {
   }
 }
 
-module "Vpc" {
+module "Vpc_3" {
   vpc_cidr = "192.168.0.0/16"
   tags     = {
     alpha.eksctl.io/cluster-oidc-enabled = "true"
