@@ -30,17 +30,3 @@ module "Vpc" {
   }
 }
 
-module "Vpc" {
-  vpc_cidr = "192.168.0.0/16"
-  tags     = {
-    aws:cloudformation:logical-id = "VPC"
-    aws:cloudformation:stack-id = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburrEks-cluster/9c9ee500-ac7a-11ed-994f-0af03e412367"
-    Name = "eksctl-kaiburrEks-cluster/VPC"
-    eksctl.cluster.k8s.io/v1alpha1/cluster-name = "kaiburrEks"
-    alpha.eksctl.io/cluster-name = "kaiburrEks"
-    aws:cloudformation:stack-name = "eksctl-kaiburrEks-cluster"
-    alpha.eksctl.io/cluster-oidc-enabled = "true"
-    alpha.eksctl.io/eksctl-version = "0.127.0"
-  }
-}
-
