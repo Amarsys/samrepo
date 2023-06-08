@@ -1,6 +1,7 @@
 module "subnet_3" {
   cidr_block              = "192.168.0.0/19"
   map_public_ip_on_launch = true
+  vpc_id                  = module.vpc.vpc_3
   az                      = "use1-az6"
   tags                    = {
     alpha.eksctl.io/eksctl-version = "0.127.0"
@@ -18,6 +19,7 @@ module "subnet_3" {
 module "subnet_4" {
   cidr_block              = "192.168.32.0/19"
   map_public_ip_on_launch = true
+  vpc_id                  = module.vpc.vpc_4
   az                      = "use1-az1"
   tags                    = {
     aws:cloudformation:stack-id = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburrEks-cluster/9c9ee500-ac7a-11ed-994f-0af03e412367"
@@ -35,6 +37,7 @@ module "subnet_4" {
 module "subnet_5" {
   cidr_block              = "192.168.160.0/19"
   map_public_ip_on_launch = false
+  vpc_id                  = module.vpc.vpc_2
   az                      = "use1-az2"
   tags                    = {
     Name = "eksctl-kaiburr-cluster-cluster/SubnetPrivateUSEAST1C"
