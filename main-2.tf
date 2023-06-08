@@ -1,4 +1,4 @@
-module "Vpc_4" {
+module "vpc_4" {
   vpc_cidr = "192.168.0.0/16"
   tags     = {
     aws:cloudformation:logical-id = "VPC"
@@ -12,7 +12,7 @@ module "Vpc_4" {
   }
 }
 
-module "Subnet_1" {
+module "subnet_1" {
   cidr_block              = "192.168.128.0/19"
   map_public_ip_on_launch = false
   az                      = "use1-az1"
@@ -29,7 +29,7 @@ module "Subnet_1" {
   }
 }
 
-module "Subnet_2" {
+module "subnet_2" {
   cidr_block              = "192.168.96.0/19"
   map_public_ip_on_launch = false
   az                      = "use1-az6"
