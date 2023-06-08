@@ -1,6 +1,7 @@
 module "subnet_21" {
   cidr_block              = "192.168.64.0/19"
   map_public_ip_on_launch = true
+  vpc_id                  = module.vpc.vpc_4
   az                      = "use1-az2"
   tags                    = {
     alpha.eksctl.io/cluster-name = "kaiburrEks"
@@ -18,6 +19,7 @@ module "subnet_21" {
 module "subnet_22" {
   cidr_block              = "192.168.96.0/19"
   map_public_ip_on_launch = false
+  vpc_id                  = module.vpc.vpc_4
   az                      = "use1-az6"
   tags                    = {
     kubernetes.io/role/internal-elb = "1"
@@ -35,6 +37,7 @@ module "subnet_22" {
 module "subnet_23" {
   cidr_block              = "172.31.48.0/20"
   map_public_ip_on_launch = true
+  vpc_id                  = module.vpc.vpc_1
   az                      = "use1-az3"
 }
 
