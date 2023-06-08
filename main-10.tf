@@ -1,4 +1,4 @@
-module "Subnet_24" {
+module "subnet_24" {
   cidr_block              = "192.168.0.0/19"
   map_public_ip_on_launch = true
   az                      = "use1-az6"
