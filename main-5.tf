@@ -1,6 +1,7 @@
 module "subnet_9" {
   cidr_block              = "192.168.64.0/19"
   map_public_ip_on_launch = true
+  vpc_id                  = module.vpc.vpc_2
   az                      = "use1-az2"
   tags                    = {
     eksctl.cluster.k8s.io/v1alpha1/cluster-name = "kaiburr-cluster"
@@ -18,6 +19,7 @@ module "subnet_9" {
 module "subnet_10" {
   cidr_block              = "192.168.32.0/19"
   map_public_ip_on_launch = true
+  vpc_id                  = module.vpc.vpc_2
   az                      = "use1-az1"
   tags                    = {
     alpha.eksctl.io/eksctl-version = "0.127.0"
@@ -35,6 +37,7 @@ module "subnet_10" {
 module "subnet_11" {
   cidr_block              = "172.31.16.0/20"
   map_public_ip_on_launch = true
+  vpc_id                  = module.vpc.vpc_1
   az                      = "use1-az4"
 }
 
