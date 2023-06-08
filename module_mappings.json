@@ -4,5 +4,6 @@
   "moduleRefs": ["vpcId"]
 ],[
   "moduleName": "subnet",
-  "type": "Subnet"
+  "type": "Subnet",
+  "moduleRefs": ["subnetId"]
 ]]
