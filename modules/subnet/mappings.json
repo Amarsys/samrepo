@@ -16,11 +16,11 @@
     "moduleName": "subnet",
     "variableName": "vpc_id",
     "type": "Subnet",
-    "mappingFieldName": "id",
+    "mappingFieldName": "vpcId",
     "get_value_from_module_output": true,
     "mappingModuleName": "vpc",
     "mappingModuleRef": "vpcId",
-    "moduleRef": "vpcId"
+    "referenceKey": "id"
 ],
 [
     "moduleName": "subnet",
