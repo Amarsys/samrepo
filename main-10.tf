@@ -1,7 +1,7 @@
 module "subnet_24" {
   cidr_block              = "192.168.0.0/19"
   map_public_ip_on_launch = true
-  vpc_id                  = module.vpc.vpc_2
+  vpc_id                  = module.vpc_2.id
   az                      = "use1-az6"
   tags                    = {
     aws:cloudformation:stack-id = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburr-cluster-cluster/ac75a270-a70c-11ed-9155-12447c80f821"
