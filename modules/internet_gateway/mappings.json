@@ -4,7 +4,13 @@
         "variableName": "vpc_id",
         "type": "InternetGateway",
         "mappingFieldName": ".[0].dataObject.attachments[0].vpcId",
-        "get_value_from_module_output": false
+        "get_value_from_module_output": false,
+        "condition": """
+        if(data.attachments.size() > 0 && data.attachments.any{attachment -> attachment.vpcId != null}){
+            def vpcAttachment = data.attachments.findAll{it.vpcId != null}
+            return vpcAttachment.vpcId;
+        }
+        """
     },
     {
         "moduleName": "internet_gateway",
