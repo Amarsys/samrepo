@@ -3,21 +3,21 @@
     "variableName": "cidr_block",
     "type": "Subnet",
     "mappingFieldName": "cidrBlock",
-    "get_value_from_module_output": false
+    "isReferenceVariable": false
 ],
 [
     "moduleName": "subnet",
     "variableName": "map_public_ip_on_launch",
     "type": "Subnet",
     "mappingFieldName": "mapPublicIpOnLaunch",
-    "get_value_from_module_output": false
+    "isReferenceVariable": false
 ],
 [
     "moduleName": "subnet",
     "variableName": "vpc_id",
     "type": "Subnet",
     "mappingFieldName": "vpcId",
-    "get_value_from_module_output": true,
+    "isReferenceVariable": true,
     "mappingModuleName": "vpc",
     "mappingModuleRef": "vpcId",
     "referenceKey": "id"
@@ -27,12 +27,12 @@
     "variableName": "az",
     "type": "Subnet",
     "mappingFieldName": "availabilityZoneId",
-    "get_value_from_module_output": false
+    "isReferenceVariable": false
 ],
 [
     "moduleName": "subnet",
     "variableName": "tags",
     "type": "Subnet",
     "mappingFieldName": "tags",
-    "get_value_from_module_output": false
+    "isReferenceVariable": false
 ]]
