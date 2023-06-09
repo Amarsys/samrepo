@@ -1,7 +1,7 @@
 module "subnet_15" {
   cidr_block              = "192.168.128.0/19"
   map_public_ip_on_launch = false
-  vpc_id                  = module.vpc.vpc_2
+  vpc_id                  = module.vpc_2.id
   az                      = "use1-az1"
   tags                    = {
     eksctl.cluster.k8s.io/v1alpha1/cluster-name = "kaiburr-cluster"
@@ -19,14 +19,14 @@ module "subnet_15" {
 module "subnet_16" {
   cidr_block              = "172.31.0.0/20"
   map_public_ip_on_launch = true
-  vpc_id                  = module.vpc.vpc_1
+  vpc_id                  = module.vpc_1.id
   az                      = "use1-az1"
 }
 
 module "subnet_17" {
   cidr_block              = "192.168.96.0/19"
   map_public_ip_on_launch = false
-  vpc_id                  = module.vpc.vpc_3
+  vpc_id                  = module.vpc_3.id
   az                      = "use1-az6"
   tags                    = {
     aws:cloudformation:logical-id = "SubnetPrivateUSEAST1A"
