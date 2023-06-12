@@ -1,4 +1,5 @@
 module "internet_gateway_1" {
+  vpc_id = "[vpc-07452964709d9cc87]"
   tags   = {
     aws:cloudformation:logical-id = "InternetGateway"
     alpha.eksctl.io/eksctl-version = "0.127.0"
@@ -12,6 +13,7 @@ module "internet_gateway_1" {
 }
 
 module "internet_gateway_2" {
+  vpc_id = "[vpc-03811f75a97cffa86]"
   tags   = {
     alpha.eksctl.io/cluster-name = "kaiburr-cluster"
     eksctl.cluster.k8s.io/v1alpha1/cluster-name = "kaiburr-cluster"
@@ -25,6 +27,7 @@ module "internet_gateway_2" {
 }
 
 module "internet_gateway_3" {
+  vpc_id = "[vpc-0a18e3337585e7f2d]"
   tags   = {
     alpha.eksctl.io/eksctl-version = "0.127.0"
     aws:cloudformation:logical-id = "InternetGateway"
