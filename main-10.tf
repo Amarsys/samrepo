@@ -1,4 +1,5 @@
 module "subnet_24" {
+ source ="./modules/subnet"
   cidr_block              = "192.168.0.0/19"
   map_public_ip_on_launch = true
   vpc_id                  = module.vpc_2.id
@@ -17,6 +18,7 @@ module "subnet_24" {
 }
 
 module "nat_gateway_1" {
+ source ="./modules/nat_gateway"
   subnet_id = module.subnet_24.id
   tags      = {
     aws:cloudformation:stack-name = "eksctl-kaiburr-cluster-cluster"
@@ -31,6 +33,7 @@ module "nat_gateway_1" {
 }
 
 module "nat_gateway_2" {
+ source ="./modules/nat_gateway"
   subnet_id = module.subnet_14.id
   tags      = {
     aws:cloudformation:stack-name = "eksctl-kaiburrEks-cluster"
