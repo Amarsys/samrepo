@@ -13,6 +13,7 @@ module "nat_gateway_3" {
 }
 
 module "internet_gateway_1" {
+  vpc_id = "[vpc-07452964709d9cc87]"
   tags   = {
     aws:cloudformation:logical-id = "InternetGateway"
     alpha.eksctl.io/eksctl-version = "0.127.0"
@@ -26,6 +27,7 @@ module "internet_gateway_1" {
 }
 
 module "internet_gateway_2" {
+  vpc_id = "[vpc-03811f75a97cffa86]"
   tags   = {
     alpha.eksctl.io/cluster-name = "kaiburr-cluster"
     eksctl.cluster.k8s.io/v1alpha1/cluster-name = "kaiburr-cluster"
