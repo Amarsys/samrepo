@@ -1,4 +1,5 @@
 module "nat_route_table_2" {
+ source ="./modules/nat_route_table"
   vpc_id         = module.vpc_3.id
   tags           = {
     aws:cloudformation:stack-name = "eksctl-kaiburr-eks-cluster"
@@ -13,6 +14,7 @@ module "nat_route_table_2" {
 }
 
 module "nat_route_table_3" {
+ source ="./modules/nat_route_table"
   vpc_id         = module.vpc_4.id
   tags           = {
     alpha.eksctl.io/cluster-name = "kaiburrEks"
@@ -27,6 +29,7 @@ module "nat_route_table_3" {
 }
 
 module "nat_route_table_4" {
+ source ="./modules/nat_route_table"
   vpc_id         = module.vpc_1.id
 }
 
