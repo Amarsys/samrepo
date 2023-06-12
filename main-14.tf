@@ -1,8 +1,10 @@
 module "nat_route_table_5" {
+ source ="./modules/nat_route_table"
   vpc_id         = module.vpc_2.id
 }
 
 module "nat_route_table_6" {
+ source ="./modules/nat_route_table"
   nat_gateway_id = module.nat_gateway_3.id
   vpc_id         = module.vpc_3.id
   tags           = {
@@ -18,6 +20,7 @@ module "nat_route_table_6" {
 }
 
 module "nat_route_table_7" {
+ source ="./modules/nat_route_table"
   vpc_id         = module.vpc_2.id
   tags           = {
     alpha.eksctl.io/cluster-oidc-enabled = "true"
