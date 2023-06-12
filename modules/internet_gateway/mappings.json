@@ -1,15 +1,16 @@
 [
-    {
+    [
         "moduleName": "internet_gateway",
         "variableName": "vpc_id",
         "type": "InternetGateway",
-        "mappingFieldName": ".[0].dataObject.attachments[0].vpcId",
-        "get_value_from_module_output": false,
-    {
+        "mappingFieldName": "attachments.vpcId",
+        "isReferenceVariable": false,
+    ],
+    [
         "moduleName": "internet_gateway",
         "variableName": "tags",
         "type": "InternetGateway",
-        "mappingFieldName": ".[0].dataObject.tags",
-        "get_value_from_module_output": false
-    }
+        "mappingFieldName": "tags",
+        "isReferenceVariable": false
+    ]
 ]
