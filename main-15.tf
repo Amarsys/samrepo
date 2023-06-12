@@ -1,4 +1,5 @@
 module "nat_route_table_8" {
+ source ="./modules/nat_route_table"
   nat_gateway_id = module.nat_gateway_1.id
   vpc_id         = module.vpc_2.id
   tags           = {
@@ -14,6 +15,7 @@ module "nat_route_table_8" {
 }
 
 module "nat_route_table_9" {
+ source ="./modules/nat_route_table"
   nat_gateway_id = module.nat_gateway_2.id
   vpc_id         = module.vpc_4.id
   tags           = {
@@ -29,6 +31,7 @@ module "nat_route_table_9" {
 }
 
 module "nat_route_table_10" {
+ source ="./modules/nat_route_table"
   nat_gateway_id = module.nat_gateway_2.id
   vpc_id         = module.vpc_4.id
   tags           = {
