@@ -1,4 +1,3 @@
-
 module "vpc_1" {
   vpc_cidr = "172.31.0.0/16"
 }
