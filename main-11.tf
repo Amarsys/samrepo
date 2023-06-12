@@ -1,4 +1,5 @@
 module "nat_gateway_3" {
+ source ="./modules/nat_gateway"
   subnet_id = module.subnet_3.id
   tags      = {
     aws:cloudformation:stack-name = "eksctl-kaiburr-eks-cluster"
@@ -13,6 +14,7 @@ module "nat_gateway_3" {
 }
 
 module "internet_gateway_1" {
+ source ="./modules/internet_gateway"
   vpc_id = "[vpc-07452964709d9cc87]"
   tags   = {
     aws:cloudformation:logical-id = "InternetGateway"
@@ -27,6 +29,7 @@ module "internet_gateway_1" {
 }
 
 module "internet_gateway_2" {
+ source ="./modules/internet_gateway"
   vpc_id = "[vpc-03811f75a97cffa86]"
   tags   = {
     alpha.eksctl.io/cluster-name = "kaiburr-cluster"
