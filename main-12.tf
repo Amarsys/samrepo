@@ -1,4 +1,5 @@
 module "internet_gateway_3" {
+ source ="./modules/internet_gateway"
   vpc_id = "[vpc-0a18e3337585e7f2d]"
   tags   = {
     alpha.eksctl.io/eksctl-version = "0.127.0"
@@ -13,10 +14,12 @@ module "internet_gateway_3" {
 }
 
 module "internet_gateway_4" {
+ source ="./modules/internet_gateway"
   vpc_id = "[vpc-ca1dbeb7]"
 }
 
 module "nat_route_table_1" {
+ source ="./modules/nat_route_table"
   vpc_id         = module.vpc_3.id
 }
 
