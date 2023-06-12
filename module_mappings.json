@@ -14,4 +14,8 @@
   "moduleName": "internet_gateway",
   "type": "InternetGateway",
   "moduleRefs": ["internetGatewayId"]
+],[
+  "moduleName": "nat_route_table",
+  "type": "RouteTable",
+  "moduleRefs": ["routeTableId"]
 ]]
