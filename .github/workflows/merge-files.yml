@@ -1,0 +1,25 @@
+name: Merge Files
+
+on:
+  workflow_dispatch:
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Merge Files
+        run: |
+          echo "" > main.tf
+          for file in main-*.tf; do
+            cat "$file" >> main.tf
+            echo "" >> main.tf
+          done
+
+      - name: Commit and Push
+        uses: stefanzweifel/git-auto-commit-action@v4.16.0
+        with:
+          commit_message: 'Merged files into main.tf'
