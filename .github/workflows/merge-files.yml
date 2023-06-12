@@ -28,6 +28,7 @@ jobs:
       - name: Merge Files
         run: |
           n=${{ steps.calculate_last_index.outputs.n }}
+          touch main.tf
           cat main-{1..$n}.tf >> main.tf
 
       - name: Commit and Push
