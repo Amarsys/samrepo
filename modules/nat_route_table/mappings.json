@@ -4,14 +4,20 @@
         "variableName": "nat_gateway_id",
         "type": "RouteTable",
         "mappingFieldName": "natGatewayId",
-        "isReferenceVariable": true
+        "isReferenceVariable": true,
+        "mappingModuleName": "nat_gateway",
+        "mappingModuleRef": "natGatewayId",
+        "referenceKey": "id"
     ],
     [
         "moduleName": "nat_route_table",
         "variableName": "vpc_id",
         "type": "RouteTable",
         "mappingFieldName": "vpcId",
-        "isReferenceVariable": true
+        "isReferenceVariable": true,
+        "mappingModuleName": "vpc",
+        "mappingModuleRef": "vpcId",
+        "referenceKey": "id"
     ],
     [
         "moduleName": "nat_route_table",
