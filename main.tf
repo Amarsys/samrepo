@@ -30,196 +30,6 @@ module "vpc_3" {
   }
 }
 
-
-module "internet_gateway_3" {
-  vpc_id = "[vpc-0a18e3337585e7f2d]"
-  tags   = {
-    alpha.eksctl.io/eksctl-version = "0.127.0"
-    aws:cloudformation:logical-id = "InternetGateway"
-    aws:cloudformation:stack-name = "eksctl-kaiburrEks-cluster"
-    Name = "eksctl-kaiburrEks-cluster/InternetGateway"
-    alpha.eksctl.io/cluster-oidc-enabled = "true"
-    aws:cloudformation:stack-id = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburrEks-cluster/9c9ee500-ac7a-11ed-994f-0af03e412367"
-    alpha.eksctl.io/cluster-name = "kaiburrEks"
-    eksctl.cluster.k8s.io/v1alpha1/cluster-name = "kaiburrEks"
-  }
-}
-
-module "internet_gateway_4" {
-  vpc_id = "[vpc-ca1dbeb7]"
-}
-
-module "nat_route_table_1" {
-  vpc_id         = module.vpc_3.id
-}
-
-
-module "nat_gateway_3" {
-  subnet_id = module.subnet_3.id
-  tags      = {
-    aws:cloudformation:stack-name = "eksctl-kaiburr-eks-cluster"
-    alpha.eksctl.io/cluster-name = "kaiburr-eks"
-    aws:cloudformation:stack-id = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburr-eks-cluster/b3e45610-a251-11ed-8758-1297053ce6d9"
-    eksctl.cluster.k8s.io/v1alpha1/cluster-name = "kaiburr-eks"
-    alpha.eksctl.io/cluster-oidc-enabled = "true"
-    aws:cloudformation:logical-id = "NATGateway"
-    alpha.eksctl.io/eksctl-version = "0.127.0"
-    Name = "eksctl-kaiburr-eks-cluster/NATGateway"
-  }
-}
-
-module "internet_gateway_1" {
-  vpc_id = "[vpc-07452964709d9cc87]"
-  tags   = {
-    aws:cloudformation:logical-id = "InternetGateway"
-    alpha.eksctl.io/eksctl-version = "0.127.0"
-    alpha.eksctl.io/cluster-oidc-enabled = "true"
-    aws:cloudformation:stack-id = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburr-eks-cluster/b3e45610-a251-11ed-8758-1297053ce6d9"
-    Name = "eksctl-kaiburr-eks-cluster/InternetGateway"
-    aws:cloudformation:stack-name = "eksctl-kaiburr-eks-cluster"
-    eksctl.cluster.k8s.io/v1alpha1/cluster-name = "kaiburr-eks"
-    alpha.eksctl.io/cluster-name = "kaiburr-eks"
-  }
-}
-
-module "internet_gateway_2" {
-  vpc_id = "[vpc-03811f75a97cffa86]"
-  tags   = {
-    alpha.eksctl.io/cluster-name = "kaiburr-cluster"
-    eksctl.cluster.k8s.io/v1alpha1/cluster-name = "kaiburr-cluster"
-    alpha.eksctl.io/cluster-oidc-enabled = "true"
-    aws:cloudformation:logical-id = "InternetGateway"
-    aws:cloudformation:stack-id = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburr-cluster-cluster/ac75a270-a70c-11ed-9155-12447c80f821"
-    alpha.eksctl.io/eksctl-version = "0.127.0"
-    Name = "eksctl-kaiburr-cluster-cluster/InternetGateway"
-    aws:cloudformation:stack-name = "eksctl-kaiburr-cluster-cluster"
-  }
-}
-
-
-module "subnet_15" {
-  cidr_block              = "192.168.128.0/19"
-  map_public_ip_on_launch = false
-  vpc_id                  = module.vpc_2.id
-  az                      = "use1-az1"
-  tags                    = {
-    eksctl.cluster.k8s.io/v1alpha1/cluster-name = "kaiburr-cluster"
-    aws:cloudformation:stack-id = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburr-cluster-cluster/ac75a270-a70c-11ed-9155-12447c80f821"
-    alpha.eksctl.io/eksctl-version = "0.127.0"
-    alpha.eksctl.io/cluster-oidc-enabled = "true"
-    Name = "eksctl-kaiburr-cluster-cluster/SubnetPrivateUSEAST1B"
-    kubernetes.io/role/internal-elb = "1"
-    aws:cloudformation:logical-id = "SubnetPrivateUSEAST1B"
-    aws:cloudformation:stack-name = "eksctl-kaiburr-cluster-cluster"
-    alpha.eksctl.io/cluster-name = "kaiburr-cluster"
-  }
-}
-
-module "subnet_16" {
-  cidr_block              = "172.31.0.0/20"
-  map_public_ip_on_launch = true
-  vpc_id                  = module.vpc_1.id
-  az                      = "use1-az1"
-}
-
-module "subnet_17" {
-  cidr_block              = "192.168.96.0/19"
-  map_public_ip_on_launch = false
-  vpc_id                  = module.vpc_3.id
-  az                      = "use1-az6"
-  tags                    = {
-    aws:cloudformation:logical-id = "SubnetPrivateUSEAST1A"
-    alpha.eksctl.io/cluster-oidc-enabled = "true"
-    aws:cloudformation:stack-name = "eksctl-kaiburr-eks-cluster"
-    kubernetes.io/role/internal-elb = "1"
-    alpha.eksctl.io/cluster-name = "kaiburr-eks"
-    eksctl.cluster.k8s.io/v1alpha1/cluster-name = "kaiburr-eks"
-    alpha.eksctl.io/eksctl-version = "0.127.0"
-    aws:cloudformation:stack-id = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburr-eks-cluster/b3e45610-a251-11ed-8758-1297053ce6d9"
-    Name = "eksctl-kaiburr-eks-cluster/SubnetPrivateUSEAST1A"
-  }
-}
-
-
-module "nat_route_table_14" {
-  nat_gateway_id = module.nat_gateway_2.id
-  vpc_id         = module.vpc_4.id
-  tags           = {
-    alpha.eksctl.io/cluster-oidc-enabled = "true"
-    eksctl.cluster.k8s.io/v1alpha1/cluster-name = "kaiburrEks"
-    Name = "eksctl-kaiburrEks-cluster/PrivateRouteTableUSEAST1C"
-    aws:cloudformation:logical-id = "PrivateRouteTableUSEAST1C"
-    aws:cloudformation:stack-name = "eksctl-kaiburrEks-cluster"
-    alpha.eksctl.io/eksctl-version = "0.127.0"
-    alpha.eksctl.io/cluster-name = "kaiburrEks"
-    aws:cloudformation:stack-id = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburrEks-cluster/9c9ee500-ac7a-11ed-994f-0af03e412367"
-  }
-}
-
-module "nat_route_table_15" {
-  vpc_id         = module.vpc_4.id
-}
-
-module "nat_route_table_16" {
-  nat_gateway_id = module.nat_gateway_3.id
-  vpc_id         = module.vpc_3.id
-  tags           = {
-    alpha.eksctl.io/cluster-name = "kaiburr-eks"
-    alpha.eksctl.io/eksctl-version = "0.127.0"
-    alpha.eksctl.io/cluster-oidc-enabled = "true"
-    aws:cloudformation:stack-name = "eksctl-kaiburr-eks-cluster"
-    Name = "eksctl-kaiburr-eks-cluster/PrivateRouteTableUSEAST1B"
-    aws:cloudformation:stack-id = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburr-eks-cluster/b3e45610-a251-11ed-8758-1297053ce6d9"
-    eksctl.cluster.k8s.io/v1alpha1/cluster-name = "kaiburr-eks"
-    aws:cloudformation:logical-id = "PrivateRouteTableUSEAST1B"
-  }
-}
-
-
-module "subnet_9" {
-  cidr_block              = "192.168.64.0/19"
-  map_public_ip_on_launch = true
-  vpc_id                  = module.vpc_2.id
-  az                      = "use1-az2"
-  tags                    = {
-    eksctl.cluster.k8s.io/v1alpha1/cluster-name = "kaiburr-cluster"
-    alpha.eksctl.io/cluster-name = "kaiburr-cluster"
-    alpha.eksctl.io/cluster-oidc-enabled = "true"
-    alpha.eksctl.io/eksctl-version = "0.127.0"
-    aws:cloudformation:stack-name = "eksctl-kaiburr-cluster-cluster"
-    kubernetes.io/role/elb = "1"
-    Name = "eksctl-kaiburr-cluster-cluster/SubnetPublicUSEAST1C"
-    aws:cloudformation:stack-id = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburr-cluster-cluster/ac75a270-a70c-11ed-9155-12447c80f821"
-    aws:cloudformation:logical-id = "SubnetPublicUSEAST1C"
-  }
-}
-
-module "subnet_10" {
-  cidr_block              = "192.168.32.0/19"
-  map_public_ip_on_launch = true
-  vpc_id                  = module.vpc_2.id
-  az                      = "use1-az1"
-  tags                    = {
-    alpha.eksctl.io/eksctl-version = "0.127.0"
-    alpha.eksctl.io/cluster-oidc-enabled = "true"
-    aws:cloudformation:stack-name = "eksctl-kaiburr-cluster-cluster"
-    kubernetes.io/role/elb = "1"
-    alpha.eksctl.io/cluster-name = "kaiburr-cluster"
-    eksctl.cluster.k8s.io/v1alpha1/cluster-name = "kaiburr-cluster"
-    Name = "eksctl-kaiburr-cluster-cluster/SubnetPublicUSEAST1B"
-    aws:cloudformation:stack-id = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburr-cluster-cluster/ac75a270-a70c-11ed-9155-12447c80f821"
-    aws:cloudformation:logical-id = "SubnetPublicUSEAST1B"
-  }
-}
-
-module "subnet_11" {
-  cidr_block              = "172.31.16.0/20"
-  map_public_ip_on_launch = true
-  vpc_id                  = module.vpc_1.id
-  az                      = "use1-az4"
-}
-
-
 module "vpc_4" {
   vpc_cidr = "192.168.0.0/16"
   tags     = {
@@ -269,7 +79,6 @@ module "subnet_2" {
     kubernetes.io/role/internal-elb = "1"
   }
 }
-
 
 module "subnet_3" {
   cidr_block              = "192.168.0.0/19"
@@ -325,6 +134,80 @@ module "subnet_5" {
   }
 }
 
+module "subnet_6" {
+  cidr_block              = "172.31.80.0/20"
+  map_public_ip_on_launch = true
+  vpc_id                  = module.vpc_1.id
+  az                      = "use1-az2"
+}
+
+module "subnet_7" {
+  cidr_block              = "172.31.32.0/20"
+  map_public_ip_on_launch = true
+  vpc_id                  = module.vpc_1.id
+  az                      = "use1-az6"
+}
+
+module "subnet_8" {
+  cidr_block              = "192.168.160.0/19"
+  map_public_ip_on_launch = false
+  vpc_id                  = module.vpc_4.id
+  az                      = "use1-az2"
+  tags                    = {
+    alpha.eksctl.io/cluster-oidc-enabled = "true"
+    Name = "eksctl-kaiburrEks-cluster/SubnetPrivateUSEAST1C"
+    alpha.eksctl.io/eksctl-version = "0.127.0"
+    eksctl.cluster.k8s.io/v1alpha1/cluster-name = "kaiburrEks"
+    alpha.eksctl.io/cluster-name = "kaiburrEks"
+    aws:cloudformation:stack-id = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburrEks-cluster/9c9ee500-ac7a-11ed-994f-0af03e412367"
+    aws:cloudformation:stack-name = "eksctl-kaiburrEks-cluster"
+    aws:cloudformation:logical-id = "SubnetPrivateUSEAST1C"
+    kubernetes.io/role/internal-elb = "1"
+  }
+}
+
+module "subnet_9" {
+  cidr_block              = "192.168.64.0/19"
+  map_public_ip_on_launch = true
+  vpc_id                  = module.vpc_2.id
+  az                      = "use1-az2"
+  tags                    = {
+    eksctl.cluster.k8s.io/v1alpha1/cluster-name = "kaiburr-cluster"
+    alpha.eksctl.io/cluster-name = "kaiburr-cluster"
+    alpha.eksctl.io/cluster-oidc-enabled = "true"
+    alpha.eksctl.io/eksctl-version = "0.127.0"
+    aws:cloudformation:stack-name = "eksctl-kaiburr-cluster-cluster"
+    kubernetes.io/role/elb = "1"
+    Name = "eksctl-kaiburr-cluster-cluster/SubnetPublicUSEAST1C"
+    aws:cloudformation:stack-id = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburr-cluster-cluster/ac75a270-a70c-11ed-9155-12447c80f821"
+    aws:cloudformation:logical-id = "SubnetPublicUSEAST1C"
+  }
+}
+
+module "subnet_10" {
+  cidr_block              = "192.168.32.0/19"
+  map_public_ip_on_launch = true
+  vpc_id                  = module.vpc_2.id
+  az                      = "use1-az1"
+  tags                    = {
+    alpha.eksctl.io/eksctl-version = "0.127.0"
+    alpha.eksctl.io/cluster-oidc-enabled = "true"
+    aws:cloudformation:stack-name = "eksctl-kaiburr-cluster-cluster"
+    kubernetes.io/role/elb = "1"
+    alpha.eksctl.io/cluster-name = "kaiburr-cluster"
+    eksctl.cluster.k8s.io/v1alpha1/cluster-name = "kaiburr-cluster"
+    Name = "eksctl-kaiburr-cluster-cluster/SubnetPublicUSEAST1B"
+    aws:cloudformation:stack-id = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburr-cluster-cluster/ac75a270-a70c-11ed-9155-12447c80f821"
+    aws:cloudformation:logical-id = "SubnetPublicUSEAST1B"
+  }
+}
+
+module "subnet_11" {
+  cidr_block              = "172.31.16.0/20"
+  map_public_ip_on_launch = true
+  vpc_id                  = module.vpc_1.id
+  az                      = "use1-az4"
+}
 
 module "subnet_12" {
   cidr_block              = "192.168.64.0/19"
@@ -380,6 +263,48 @@ module "subnet_14" {
   }
 }
 
+module "subnet_15" {
+  cidr_block              = "192.168.128.0/19"
+  map_public_ip_on_launch = false
+  vpc_id                  = module.vpc_2.id
+  az                      = "use1-az1"
+  tags                    = {
+    eksctl.cluster.k8s.io/v1alpha1/cluster-name = "kaiburr-cluster"
+    aws:cloudformation:stack-id = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburr-cluster-cluster/ac75a270-a70c-11ed-9155-12447c80f821"
+    alpha.eksctl.io/eksctl-version = "0.127.0"
+    alpha.eksctl.io/cluster-oidc-enabled = "true"
+    Name = "eksctl-kaiburr-cluster-cluster/SubnetPrivateUSEAST1B"
+    kubernetes.io/role/internal-elb = "1"
+    aws:cloudformation:logical-id = "SubnetPrivateUSEAST1B"
+    aws:cloudformation:stack-name = "eksctl-kaiburr-cluster-cluster"
+    alpha.eksctl.io/cluster-name = "kaiburr-cluster"
+  }
+}
+
+module "subnet_16" {
+  cidr_block              = "172.31.0.0/20"
+  map_public_ip_on_launch = true
+  vpc_id                  = module.vpc_1.id
+  az                      = "use1-az1"
+}
+
+module "subnet_17" {
+  cidr_block              = "192.168.96.0/19"
+  map_public_ip_on_launch = false
+  vpc_id                  = module.vpc_3.id
+  az                      = "use1-az6"
+  tags                    = {
+    aws:cloudformation:logical-id = "SubnetPrivateUSEAST1A"
+    alpha.eksctl.io/cluster-oidc-enabled = "true"
+    aws:cloudformation:stack-name = "eksctl-kaiburr-eks-cluster"
+    kubernetes.io/role/internal-elb = "1"
+    alpha.eksctl.io/cluster-name = "kaiburr-eks"
+    eksctl.cluster.k8s.io/v1alpha1/cluster-name = "kaiburr-eks"
+    alpha.eksctl.io/eksctl-version = "0.127.0"
+    aws:cloudformation:stack-id = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburr-eks-cluster/b3e45610-a251-11ed-8758-1297053ce6d9"
+    Name = "eksctl-kaiburr-eks-cluster/SubnetPrivateUSEAST1A"
+  }
+}
 
 module "subnet_18" {
   cidr_block              = "172.31.64.0/20"
@@ -424,166 +349,6 @@ module "subnet_20" {
   }
 }
 
-
-module "nat_route_table_8" {
-  nat_gateway_id = module.nat_gateway_1.id
-  vpc_id         = module.vpc_2.id
-  tags           = {
-    aws:cloudformation:logical-id = "PrivateRouteTableUSEAST1C"
-    eksctl.cluster.k8s.io/v1alpha1/cluster-name = "kaiburr-cluster"
-    alpha.eksctl.io/cluster-name = "kaiburr-cluster"
-    alpha.eksctl.io/cluster-oidc-enabled = "true"
-    aws:cloudformation:stack-id = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburr-cluster-cluster/ac75a270-a70c-11ed-9155-12447c80f821"
-    aws:cloudformation:stack-name = "eksctl-kaiburr-cluster-cluster"
-    Name = "eksctl-kaiburr-cluster-cluster/PrivateRouteTableUSEAST1C"
-    alpha.eksctl.io/eksctl-version = "0.127.0"
-  }
-}
-
-module "nat_route_table_9" {
-  nat_gateway_id = module.nat_gateway_2.id
-  vpc_id         = module.vpc_4.id
-  tags           = {
-    aws:cloudformation:logical-id = "PrivateRouteTableUSEAST1B"
-    aws:cloudformation:stack-id = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburrEks-cluster/9c9ee500-ac7a-11ed-994f-0af03e412367"
-    aws:cloudformation:stack-name = "eksctl-kaiburrEks-cluster"
-    alpha.eksctl.io/cluster-oidc-enabled = "true"
-    alpha.eksctl.io/eksctl-version = "0.127.0"
-    Name = "eksctl-kaiburrEks-cluster/PrivateRouteTableUSEAST1B"
-    eksctl.cluster.k8s.io/v1alpha1/cluster-name = "kaiburrEks"
-    alpha.eksctl.io/cluster-name = "kaiburrEks"
-  }
-}
-
-module "nat_route_table_10" {
-  nat_gateway_id = module.nat_gateway_2.id
-  vpc_id         = module.vpc_4.id
-  tags           = {
-    alpha.eksctl.io/cluster-name = "kaiburrEks"
-    eksctl.cluster.k8s.io/v1alpha1/cluster-name = "kaiburrEks"
-    alpha.eksctl.io/cluster-oidc-enabled = "true"
-    alpha.eksctl.io/eksctl-version = "0.127.0"
-    aws:cloudformation:logical-id = "PrivateRouteTableUSEAST1A"
-    Name = "eksctl-kaiburrEks-cluster/PrivateRouteTableUSEAST1A"
-    aws:cloudformation:stack-name = "eksctl-kaiburrEks-cluster"
-    aws:cloudformation:stack-id = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburrEks-cluster/9c9ee500-ac7a-11ed-994f-0af03e412367"
-  }
-}
-
-
-module "subnet_6" {
-  cidr_block              = "172.31.80.0/20"
-  map_public_ip_on_launch = true
-  vpc_id                  = module.vpc_1.id
-  az                      = "use1-az2"
-}
-
-module "subnet_7" {
-  cidr_block              = "172.31.32.0/20"
-  map_public_ip_on_launch = true
-  vpc_id                  = module.vpc_1.id
-  az                      = "use1-az6"
-}
-
-module "subnet_8" {
-  cidr_block              = "192.168.160.0/19"
-  map_public_ip_on_launch = false
-  vpc_id                  = module.vpc_4.id
-  az                      = "use1-az2"
-  tags                    = {
-    alpha.eksctl.io/cluster-oidc-enabled = "true"
-    Name = "eksctl-kaiburrEks-cluster/SubnetPrivateUSEAST1C"
-    alpha.eksctl.io/eksctl-version = "0.127.0"
-    eksctl.cluster.k8s.io/v1alpha1/cluster-name = "kaiburrEks"
-    alpha.eksctl.io/cluster-name = "kaiburrEks"
-    aws:cloudformation:stack-id = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburrEks-cluster/9c9ee500-ac7a-11ed-994f-0af03e412367"
-    aws:cloudformation:stack-name = "eksctl-kaiburrEks-cluster"
-    aws:cloudformation:logical-id = "SubnetPrivateUSEAST1C"
-    kubernetes.io/role/internal-elb = "1"
-  }
-}
-
-
-module "nat_route_table_5" {
-  vpc_id         = module.vpc_2.id
-}
-
-module "nat_route_table_6" {
-  nat_gateway_id = module.nat_gateway_3.id
-  vpc_id         = module.vpc_3.id
-  tags           = {
-    Name = "eksctl-kaiburr-eks-cluster/PrivateRouteTableUSEAST1A"
-    aws:cloudformation:stack-name = "eksctl-kaiburr-eks-cluster"
-    aws:cloudformation:logical-id = "PrivateRouteTableUSEAST1A"
-    alpha.eksctl.io/cluster-name = "kaiburr-eks"
-    eksctl.cluster.k8s.io/v1alpha1/cluster-name = "kaiburr-eks"
-    alpha.eksctl.io/cluster-oidc-enabled = "true"
-    aws:cloudformation:stack-id = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburr-eks-cluster/b3e45610-a251-11ed-8758-1297053ce6d9"
-    alpha.eksctl.io/eksctl-version = "0.127.0"
-  }
-}
-
-module "nat_route_table_7" {
-  vpc_id         = module.vpc_2.id
-  tags           = {
-    alpha.eksctl.io/cluster-oidc-enabled = "true"
-    alpha.eksctl.io/eksctl-version = "0.127.0"
-    Name = "eksctl-kaiburr-cluster-cluster/PublicRouteTable"
-    alpha.eksctl.io/cluster-name = "kaiburr-cluster"
-    aws:cloudformation:stack-name = "eksctl-kaiburr-cluster-cluster"
-    aws:cloudformation:stack-id = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburr-cluster-cluster/ac75a270-a70c-11ed-9155-12447c80f821"
-    aws:cloudformation:logical-id = "PublicRouteTable"
-    eksctl.cluster.k8s.io/v1alpha1/cluster-name = "kaiburr-cluster"
-  }
-}
-
-
-module "nat_route_table_11" {
-  nat_gateway_id = module.nat_gateway_1.id
-  vpc_id         = module.vpc_2.id
-  tags           = {
-    alpha.eksctl.io/cluster-name = "kaiburr-cluster"
-    aws:cloudformation:logical-id = "PrivateRouteTableUSEAST1B"
-    eksctl.cluster.k8s.io/v1alpha1/cluster-name = "kaiburr-cluster"
-    aws:cloudformation:stack-name = "eksctl-kaiburr-cluster-cluster"
-    alpha.eksctl.io/eksctl-version = "0.127.0"
-    Name = "eksctl-kaiburr-cluster-cluster/PrivateRouteTableUSEAST1B"
-    aws:cloudformation:stack-id = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburr-cluster-cluster/ac75a270-a70c-11ed-9155-12447c80f821"
-    alpha.eksctl.io/cluster-oidc-enabled = "true"
-  }
-}
-
-module "nat_route_table_12" {
-  nat_gateway_id = module.nat_gateway_3.id
-  vpc_id         = module.vpc_3.id
-  tags           = {
-    aws:cloudformation:stack-name = "eksctl-kaiburr-eks-cluster"
-    aws:cloudformation:logical-id = "PrivateRouteTableUSEAST1C"
-    alpha.eksctl.io/cluster-oidc-enabled = "true"
-    eksctl.cluster.k8s.io/v1alpha1/cluster-name = "kaiburr-eks"
-    Name = "eksctl-kaiburr-eks-cluster/PrivateRouteTableUSEAST1C"
-    alpha.eksctl.io/eksctl-version = "0.127.0"
-    alpha.eksctl.io/cluster-name = "kaiburr-eks"
-    aws:cloudformation:stack-id = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburr-eks-cluster/b3e45610-a251-11ed-8758-1297053ce6d9"
-  }
-}
-
-module "nat_route_table_13" {
-  nat_gateway_id = module.nat_gateway_1.id
-  vpc_id         = module.vpc_2.id
-  tags           = {
-    alpha.eksctl.io/cluster-name = "kaiburr-cluster"
-    aws:cloudformation:logical-id = "PrivateRouteTableUSEAST1A"
-    aws:cloudformation:stack-id = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburr-cluster-cluster/ac75a270-a70c-11ed-9155-12447c80f821"
-    eksctl.cluster.k8s.io/v1alpha1/cluster-name = "kaiburr-cluster"
-    aws:cloudformation:stack-name = "eksctl-kaiburr-cluster-cluster"
-    Name = "eksctl-kaiburr-cluster-cluster/PrivateRouteTableUSEAST1A"
-    alpha.eksctl.io/eksctl-version = "0.127.0"
-    alpha.eksctl.io/cluster-oidc-enabled = "true"
-  }
-}
-
-
 module "subnet_21" {
   cidr_block              = "192.168.64.0/19"
   map_public_ip_on_launch = true
@@ -626,40 +391,6 @@ module "subnet_23" {
   vpc_id                  = module.vpc_1.id
   az                      = "use1-az3"
 }
-
-
-module "nat_route_table_2" {
-  vpc_id         = module.vpc_3.id
-  tags           = {
-    aws:cloudformation:stack-name = "eksctl-kaiburr-eks-cluster"
-    alpha.eksctl.io/cluster-name = "kaiburr-eks"
-    aws:cloudformation:stack-id = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburr-eks-cluster/b3e45610-a251-11ed-8758-1297053ce6d9"
-    alpha.eksctl.io/eksctl-version = "0.127.0"
-    Name = "eksctl-kaiburr-eks-cluster/PublicRouteTable"
-    aws:cloudformation:logical-id = "PublicRouteTable"
-    eksctl.cluster.k8s.io/v1alpha1/cluster-name = "kaiburr-eks"
-    alpha.eksctl.io/cluster-oidc-enabled = "true"
-  }
-}
-
-module "nat_route_table_3" {
-  vpc_id         = module.vpc_4.id
-  tags           = {
-    alpha.eksctl.io/cluster-name = "kaiburrEks"
-    alpha.eksctl.io/eksctl-version = "0.127.0"
-    aws:cloudformation:logical-id = "PublicRouteTable"
-    eksctl.cluster.k8s.io/v1alpha1/cluster-name = "kaiburrEks"
-    alpha.eksctl.io/cluster-oidc-enabled = "true"
-    aws:cloudformation:stack-name = "eksctl-kaiburrEks-cluster"
-    Name = "eksctl-kaiburrEks-cluster/PublicRouteTable"
-    aws:cloudformation:stack-id = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburrEks-cluster/9c9ee500-ac7a-11ed-994f-0af03e412367"
-  }
-}
-
-module "nat_route_table_4" {
-  vpc_id         = module.vpc_1.id
-}
-
 
 module "subnet_24" {
   cidr_block              = "192.168.0.0/19"
@@ -707,4 +438,256 @@ module "nat_gateway_2" {
   }
 }
 
+module "nat_gateway_3" {
+  subnet_id = module.subnet_3.id
+  tags      = {
+    aws:cloudformation:stack-name = "eksctl-kaiburr-eks-cluster"
+    alpha.eksctl.io/cluster-name = "kaiburr-eks"
+    aws:cloudformation:stack-id = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburr-eks-cluster/b3e45610-a251-11ed-8758-1297053ce6d9"
+    eksctl.cluster.k8s.io/v1alpha1/cluster-name = "kaiburr-eks"
+    alpha.eksctl.io/cluster-oidc-enabled = "true"
+    aws:cloudformation:logical-id = "NATGateway"
+    alpha.eksctl.io/eksctl-version = "0.127.0"
+    Name = "eksctl-kaiburr-eks-cluster/NATGateway"
+  }
+}
+
+module "internet_gateway_1" {
+  vpc_id = "[vpc-07452964709d9cc87]"
+  tags   = {
+    aws:cloudformation:logical-id = "InternetGateway"
+    alpha.eksctl.io/eksctl-version = "0.127.0"
+    alpha.eksctl.io/cluster-oidc-enabled = "true"
+    aws:cloudformation:stack-id = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburr-eks-cluster/b3e45610-a251-11ed-8758-1297053ce6d9"
+    Name = "eksctl-kaiburr-eks-cluster/InternetGateway"
+    aws:cloudformation:stack-name = "eksctl-kaiburr-eks-cluster"
+    eksctl.cluster.k8s.io/v1alpha1/cluster-name = "kaiburr-eks"
+    alpha.eksctl.io/cluster-name = "kaiburr-eks"
+  }
+}
+
+module "internet_gateway_2" {
+  vpc_id = "[vpc-03811f75a97cffa86]"
+  tags   = {
+    alpha.eksctl.io/cluster-name = "kaiburr-cluster"
+    eksctl.cluster.k8s.io/v1alpha1/cluster-name = "kaiburr-cluster"
+    alpha.eksctl.io/cluster-oidc-enabled = "true"
+    aws:cloudformation:logical-id = "InternetGateway"
+    aws:cloudformation:stack-id = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburr-cluster-cluster/ac75a270-a70c-11ed-9155-12447c80f821"
+    alpha.eksctl.io/eksctl-version = "0.127.0"
+    Name = "eksctl-kaiburr-cluster-cluster/InternetGateway"
+    aws:cloudformation:stack-name = "eksctl-kaiburr-cluster-cluster"
+  }
+}
+
+module "internet_gateway_3" {
+  vpc_id = "[vpc-0a18e3337585e7f2d]"
+  tags   = {
+    alpha.eksctl.io/eksctl-version = "0.127.0"
+    aws:cloudformation:logical-id = "InternetGateway"
+    aws:cloudformation:stack-name = "eksctl-kaiburrEks-cluster"
+    Name = "eksctl-kaiburrEks-cluster/InternetGateway"
+    alpha.eksctl.io/cluster-oidc-enabled = "true"
+    aws:cloudformation:stack-id = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburrEks-cluster/9c9ee500-ac7a-11ed-994f-0af03e412367"
+    alpha.eksctl.io/cluster-name = "kaiburrEks"
+    eksctl.cluster.k8s.io/v1alpha1/cluster-name = "kaiburrEks"
+  }
+}
+
+module "internet_gateway_4" {
+  vpc_id = "[vpc-ca1dbeb7]"
+}
+
+module "nat_route_table_1" {
+  vpc_id         = module.vpc_3.id
+}
+
+module "nat_route_table_2" {
+  vpc_id         = module.vpc_3.id
+  tags           = {
+    aws:cloudformation:stack-name = "eksctl-kaiburr-eks-cluster"
+    alpha.eksctl.io/cluster-name = "kaiburr-eks"
+    aws:cloudformation:stack-id = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburr-eks-cluster/b3e45610-a251-11ed-8758-1297053ce6d9"
+    alpha.eksctl.io/eksctl-version = "0.127.0"
+    Name = "eksctl-kaiburr-eks-cluster/PublicRouteTable"
+    aws:cloudformation:logical-id = "PublicRouteTable"
+    eksctl.cluster.k8s.io/v1alpha1/cluster-name = "kaiburr-eks"
+    alpha.eksctl.io/cluster-oidc-enabled = "true"
+  }
+}
+
+module "nat_route_table_3" {
+  vpc_id         = module.vpc_4.id
+  tags           = {
+    alpha.eksctl.io/cluster-name = "kaiburrEks"
+    alpha.eksctl.io/eksctl-version = "0.127.0"
+    aws:cloudformation:logical-id = "PublicRouteTable"
+    eksctl.cluster.k8s.io/v1alpha1/cluster-name = "kaiburrEks"
+    alpha.eksctl.io/cluster-oidc-enabled = "true"
+    aws:cloudformation:stack-name = "eksctl-kaiburrEks-cluster"
+    Name = "eksctl-kaiburrEks-cluster/PublicRouteTable"
+    aws:cloudformation:stack-id = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburrEks-cluster/9c9ee500-ac7a-11ed-994f-0af03e412367"
+  }
+}
+
+module "nat_route_table_4" {
+  vpc_id         = module.vpc_1.id
+}
+
+module "nat_route_table_5" {
+  vpc_id         = module.vpc_2.id
+}
+
+module "nat_route_table_6" {
+  nat_gateway_id = module.nat_gateway_3.id
+  vpc_id         = module.vpc_3.id
+  tags           = {
+    Name = "eksctl-kaiburr-eks-cluster/PrivateRouteTableUSEAST1A"
+    aws:cloudformation:stack-name = "eksctl-kaiburr-eks-cluster"
+    aws:cloudformation:logical-id = "PrivateRouteTableUSEAST1A"
+    alpha.eksctl.io/cluster-name = "kaiburr-eks"
+    eksctl.cluster.k8s.io/v1alpha1/cluster-name = "kaiburr-eks"
+    alpha.eksctl.io/cluster-oidc-enabled = "true"
+    aws:cloudformation:stack-id = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburr-eks-cluster/b3e45610-a251-11ed-8758-1297053ce6d9"
+    alpha.eksctl.io/eksctl-version = "0.127.0"
+  }
+}
+
+module "nat_route_table_7" {
+  vpc_id         = module.vpc_2.id
+  tags           = {
+    alpha.eksctl.io/cluster-oidc-enabled = "true"
+    alpha.eksctl.io/eksctl-version = "0.127.0"
+    Name = "eksctl-kaiburr-cluster-cluster/PublicRouteTable"
+    alpha.eksctl.io/cluster-name = "kaiburr-cluster"
+    aws:cloudformation:stack-name = "eksctl-kaiburr-cluster-cluster"
+    aws:cloudformation:stack-id = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburr-cluster-cluster/ac75a270-a70c-11ed-9155-12447c80f821"
+    aws:cloudformation:logical-id = "PublicRouteTable"
+    eksctl.cluster.k8s.io/v1alpha1/cluster-name = "kaiburr-cluster"
+  }
+}
+
+module "nat_route_table_8" {
+  nat_gateway_id = module.nat_gateway_1.id
+  vpc_id         = module.vpc_2.id
+  tags           = {
+    aws:cloudformation:logical-id = "PrivateRouteTableUSEAST1C"
+    eksctl.cluster.k8s.io/v1alpha1/cluster-name = "kaiburr-cluster"
+    alpha.eksctl.io/cluster-name = "kaiburr-cluster"
+    alpha.eksctl.io/cluster-oidc-enabled = "true"
+    aws:cloudformation:stack-id = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburr-cluster-cluster/ac75a270-a70c-11ed-9155-12447c80f821"
+    aws:cloudformation:stack-name = "eksctl-kaiburr-cluster-cluster"
+    Name = "eksctl-kaiburr-cluster-cluster/PrivateRouteTableUSEAST1C"
+    alpha.eksctl.io/eksctl-version = "0.127.0"
+  }
+}
+
+module "nat_route_table_9" {
+  nat_gateway_id = module.nat_gateway_2.id
+  vpc_id         = module.vpc_4.id
+  tags           = {
+    aws:cloudformation:logical-id = "PrivateRouteTableUSEAST1B"
+    aws:cloudformation:stack-id = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburrEks-cluster/9c9ee500-ac7a-11ed-994f-0af03e412367"
+    aws:cloudformation:stack-name = "eksctl-kaiburrEks-cluster"
+    alpha.eksctl.io/cluster-oidc-enabled = "true"
+    alpha.eksctl.io/eksctl-version = "0.127.0"
+    Name = "eksctl-kaiburrEks-cluster/PrivateRouteTableUSEAST1B"
+    eksctl.cluster.k8s.io/v1alpha1/cluster-name = "kaiburrEks"
+    alpha.eksctl.io/cluster-name = "kaiburrEks"
+  }
+}
+
+module "nat_route_table_10" {
+  nat_gateway_id = module.nat_gateway_2.id
+  vpc_id         = module.vpc_4.id
+  tags           = {
+    alpha.eksctl.io/cluster-name = "kaiburrEks"
+    eksctl.cluster.k8s.io/v1alpha1/cluster-name = "kaiburrEks"
+    alpha.eksctl.io/cluster-oidc-enabled = "true"
+    alpha.eksctl.io/eksctl-version = "0.127.0"
+    aws:cloudformation:logical-id = "PrivateRouteTableUSEAST1A"
+    Name = "eksctl-kaiburrEks-cluster/PrivateRouteTableUSEAST1A"
+    aws:cloudformation:stack-name = "eksctl-kaiburrEks-cluster"
+    aws:cloudformation:stack-id = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburrEks-cluster/9c9ee500-ac7a-11ed-994f-0af03e412367"
+  }
+}
+
+module "nat_route_table_11" {
+  nat_gateway_id = module.nat_gateway_1.id
+  vpc_id         = module.vpc_2.id
+  tags           = {
+    alpha.eksctl.io/cluster-name = "kaiburr-cluster"
+    aws:cloudformation:logical-id = "PrivateRouteTableUSEAST1B"
+    eksctl.cluster.k8s.io/v1alpha1/cluster-name = "kaiburr-cluster"
+    aws:cloudformation:stack-name = "eksctl-kaiburr-cluster-cluster"
+    alpha.eksctl.io/eksctl-version = "0.127.0"
+    Name = "eksctl-kaiburr-cluster-cluster/PrivateRouteTableUSEAST1B"
+    aws:cloudformation:stack-id = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburr-cluster-cluster/ac75a270-a70c-11ed-9155-12447c80f821"
+    alpha.eksctl.io/cluster-oidc-enabled = "true"
+  }
+}
+
+module "nat_route_table_12" {
+  nat_gateway_id = module.nat_gateway_3.id
+  vpc_id         = module.vpc_3.id
+  tags           = {
+    aws:cloudformation:stack-name = "eksctl-kaiburr-eks-cluster"
+    aws:cloudformation:logical-id = "PrivateRouteTableUSEAST1C"
+    alpha.eksctl.io/cluster-oidc-enabled = "true"
+    eksctl.cluster.k8s.io/v1alpha1/cluster-name = "kaiburr-eks"
+    Name = "eksctl-kaiburr-eks-cluster/PrivateRouteTableUSEAST1C"
+    alpha.eksctl.io/eksctl-version = "0.127.0"
+    alpha.eksctl.io/cluster-name = "kaiburr-eks"
+    aws:cloudformation:stack-id = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburr-eks-cluster/b3e45610-a251-11ed-8758-1297053ce6d9"
+  }
+}
+
+module "nat_route_table_13" {
+  nat_gateway_id = module.nat_gateway_1.id
+  vpc_id         = module.vpc_2.id
+  tags           = {
+    alpha.eksctl.io/cluster-name = "kaiburr-cluster"
+    aws:cloudformation:logical-id = "PrivateRouteTableUSEAST1A"
+    aws:cloudformation:stack-id = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburr-cluster-cluster/ac75a270-a70c-11ed-9155-12447c80f821"
+    eksctl.cluster.k8s.io/v1alpha1/cluster-name = "kaiburr-cluster"
+    aws:cloudformation:stack-name = "eksctl-kaiburr-cluster-cluster"
+    Name = "eksctl-kaiburr-cluster-cluster/PrivateRouteTableUSEAST1A"
+    alpha.eksctl.io/eksctl-version = "0.127.0"
+    alpha.eksctl.io/cluster-oidc-enabled = "true"
+  }
+}
+
+module "nat_route_table_14" {
+  nat_gateway_id = module.nat_gateway_2.id
+  vpc_id         = module.vpc_4.id
+  tags           = {
+    alpha.eksctl.io/cluster-oidc-enabled = "true"
+    eksctl.cluster.k8s.io/v1alpha1/cluster-name = "kaiburrEks"
+    Name = "eksctl-kaiburrEks-cluster/PrivateRouteTableUSEAST1C"
+    aws:cloudformation:logical-id = "PrivateRouteTableUSEAST1C"
+    aws:cloudformation:stack-name = "eksctl-kaiburrEks-cluster"
+    alpha.eksctl.io/eksctl-version = "0.127.0"
+    alpha.eksctl.io/cluster-name = "kaiburrEks"
+    aws:cloudformation:stack-id = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburrEks-cluster/9c9ee500-ac7a-11ed-994f-0af03e412367"
+  }
+}
+
+module "nat_route_table_15" {
+  vpc_id         = module.vpc_4.id
+}
+
+module "nat_route_table_16" {
+  nat_gateway_id = module.nat_gateway_3.id
+  vpc_id         = module.vpc_3.id
+  tags           = {
+    alpha.eksctl.io/cluster-name = "kaiburr-eks"
+    alpha.eksctl.io/eksctl-version = "0.127.0"
+    alpha.eksctl.io/cluster-oidc-enabled = "true"
+    aws:cloudformation:stack-name = "eksctl-kaiburr-eks-cluster"
+    Name = "eksctl-kaiburr-eks-cluster/PrivateRouteTableUSEAST1B"
+    aws:cloudformation:stack-id = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburr-eks-cluster/b3e45610-a251-11ed-8758-1297053ce6d9"
+    eksctl.cluster.k8s.io/v1alpha1/cluster-name = "kaiburr-eks"
+    aws:cloudformation:logical-id = "PrivateRouteTableUSEAST1B"
+  }
+}
 
