@@ -1,4 +1,5 @@
 module "subnet_21" {
+ source ="./modules/subnet"
   cidr_block              = "192.168.64.0/19"
   map_public_ip_on_launch = true
   vpc_id                  = module.vpc_4.id
@@ -17,6 +18,7 @@ module "subnet_21" {
 }
 
 module "subnet_22" {
+ source ="./modules/subnet"
   cidr_block              = "192.168.96.0/19"
   map_public_ip_on_launch = false
   vpc_id                  = module.vpc_4.id
@@ -35,6 +37,7 @@ module "subnet_22" {
 }
 
 module "subnet_23" {
+ source ="./modules/subnet"
   cidr_block              = "172.31.48.0/20"
   map_public_ip_on_launch = true
   vpc_id                  = module.vpc_1.id
