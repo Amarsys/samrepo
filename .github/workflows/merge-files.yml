@@ -21,7 +21,12 @@ jobs:
 
       - name: Merge Files
         run: |
-          for file in $(ls main-*.tf | sort -n); do
+          files=()
+          while IFS=  read -r -d $'\0'; do
+            files+=("$REPLY")
+          done < <(find . -maxdepth 1 -name 'main-*.tf' -print0 | sort -n -t'-' -k2)
+
+          for file in "${files[@]}"; do
             cat "$file" >> main.tf
             echo "" >> main.tf
           done
