@@ -18,18 +18,9 @@ jobs:
 
       - name: Delete existing main.tf
         run: rm -f main.tf
-        
-      - name: Calculate last index
-        id: calculate_last_index
-        run: |
-          n=$(find . -name "main-*" -printf '.' | wc -m)
-          echo "::set-output name=n::$n"
 
       - name: Merge Files
-        run: |
-          n=${{ steps.calculate_last_index.outputs.n }}
-          touch main.tf
-          cat main-{1..$n}.tf >> main.tf
+        run: cat main-{1..100}.tf >> main.tf || true
 
       - name: Commit and Push
         uses: stefanzweifel/git-auto-commit-action@v4.16.0
