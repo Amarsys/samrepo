@@ -18,9 +18,12 @@ jobs:
 
       - name: Delete existing main.tf
         run: rm -f main.tf
+        
+      - name: Last file key
+        run: last_index=`find . -name "main-*" -printf '.' | wc -m`
 
       - name: Merge Files
-        run: cat main-{1..100}.tf >> main.tf
+        run: cat main-{1..$last_index}.tf >> main.tf
 
       - name: Commit and Push
         uses: stefanzweifel/git-auto-commit-action@v4.16.0
