@@ -6,4 +6,8 @@
   "moduleName": "subnet",
   "type": "Subnet",
   "moduleRefs": ["subnetId"]
+],[
+  "moduleName": "nat_gateway",
+  "type": "NatGateway",
+  "moduleRefs": ["natGatewayId"]
 ]]
