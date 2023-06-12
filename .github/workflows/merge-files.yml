@@ -16,10 +16,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Delete existing main.tf
+        run: rm -f main.tf
+
       - name: Merge Files
         run: |
-          echo "" > main.tf
-          for file in main-*.tf; do
+          for file in $(ls main-*.tf | sort -n); do
             cat "$file" >> main.tf
             echo "" >> main.tf
           done
