@@ -1,26 +1,29 @@
-
-
-
-  [
-    {
-        "moduleName": "igw_route_table",
-        "variableName": "tags",
-        "type": "RouteTable",
-        "mappingFieldName": "GatewayId",
-        "get_value_from_module_output": false
-    },
-    {
+[
+    [
         "moduleName": "igw_route_table",
         "variableName": "vpc_id",
         "type": "RouteTable",
         "mappingFieldName": "module.vpc.id",
-        "get_value_from_module_output": true
-    },
-    {
+        "isReferenceVariable": true,
+        "mappingModuleName": "vpc",
+        "mappingModuleRef": "vpcId",
+        "referenceKey": "id"
+    ],
+    [
         "moduleName": "igw_route_table",
         "variableName": "gateway_id",
         "type": "RouteTable",
-        "mappingFieldName": "module.internet_gw.igw_id",
-        "get_value_from_module_output": true
-    }
-  ]
+        "mappingFieldName": "gateWayId",
+        "isReferenceVariable": true,
+        "mappingModuleName": "internet_gateway",
+        "mappingModuleRef": "internetGatewayId",
+        "referenceKey": "igw_id"
+    ],
+    [
+        "moduleName": "igw_route_table",
+        "variableName": "tags",
+        "type": "RouteTable",
+        "mappingFieldName": "tags",
+        "isReferenceVariable": false
+    ]
+]
