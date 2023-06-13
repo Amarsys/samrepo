@@ -1,7 +1,8 @@
 module "internet_gateway_3" {
  source ="./modules/internet_gateway"
-  vpc_id = module.vpc_4.id
-  tags   = {
+  gateway_id = "igw-0e65dd3b705aa4069"
+  vpc_id     = module.vpc_4.id
+  tags       = {
     "alpha.eksctl.io/eksctl-version" = "0.127.0"
     "aws:cloudformation:logical-id" = "InternetGateway"
     "aws:cloudformation:stack-name" = "eksctl-kaiburrEks-cluster"
@@ -15,7 +16,8 @@ module "internet_gateway_3" {
 
 module "internet_gateway_4" {
  source ="./modules/internet_gateway"
-  vpc_id = module.vpc_1.id
+  gateway_id = "igw-17a5b36c"
+  vpc_id     = module.vpc_1.id
 }
 
 module "nat_route_table_1" {
