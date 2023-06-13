@@ -1,13 +1,6 @@
 [
     [
         "moduleName": "nat_gateway",
-        "variableName": "nat_gateway_id",
-        "type": "NatGateway",
-        "mappingFieldName": "natGatewayId",
-        "isReferenceVariable": false
-    ],
-    [
-        "moduleName": "nat_gateway",
         "variableName": "subnet_id",
         "type": "NatGateway",
         "mappingFieldName": "subnetId",
