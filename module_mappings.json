@@ -2,22 +2,10 @@
   "moduleName": "vpc",
   "type": "Vpc", 
   "moduleRefs": ["vpcId"]
-],[
-  "moduleName": "subnet",
-  "type": "Subnet",
-  "moduleRefs": ["subnetId"]
-],[
-  "moduleName": "nat_gateway",
-  "type": "NatGateway",
-  "moduleRefs": ["natGatewayId"]
-],[
+][
   "moduleName": "internet_gateway",
   "type": "InternetGateway",
   "moduleRefs": ["internetGatewayId"]
-],[
-  "moduleName": "nat_route_table",
-  "type": "RouteTable",
-  "moduleRefs": ["routeTableId"]
 ],[
   "moduleName": "igw_route_table",
   "type": "RouteTable",
