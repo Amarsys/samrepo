@@ -1,0 +1,26 @@
+
+
+
+  [
+    {
+        "moduleName": "igw_route_table",
+        "variableName": "tags",
+        "type": "RouteTable",
+        "mappingFieldName": "GatewayId",
+        "get_value_from_module_output": false
+    },
+    {
+        "moduleName": "igw_route_table",
+        "variableName": "vpc_id",
+        "type": "RouteTable",
+        "mappingFieldName": "module.vpc.id",
+        "get_value_from_module_output": true
+    },
+    {
+        "moduleName": "igw_route_table",
+        "variableName": "gateway_id",
+        "type": "RouteTable",
+        "mappingFieldName": "module.internet_gw.igw_id",
+        "get_value_from_module_output": true
+    }
+  ]

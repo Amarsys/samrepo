@@ -1,0 +1,16 @@
+[
+    {
+        "moduleName": "route_table_association",
+        "variableName": "subnet_ids",
+        "type": "",
+        "mappingFieldName": "",
+        "get_value_from_module_output": false
+    },
+    {
+        "moduleName": "route_table_association",
+        "variableName": "route_table_id",
+        "type": "",
+        "mappingFieldName": "",
+        "get_value_from_module_output": false
+    }
+]

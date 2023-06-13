@@ -3,6 +3,7 @@
 variable "tags" {
   type        = map(any)
   description = "A map of tags to assign to the resource"
+  default = {}
 }
 
 variable "vpc_id" {

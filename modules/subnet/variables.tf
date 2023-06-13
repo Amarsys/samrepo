@@ -21,6 +21,7 @@ variable "az" {
 variable "tags" {
   type        = map(any)
   description = "A map of tags to assign to the resource"
+  default = {}
 }
 
   
