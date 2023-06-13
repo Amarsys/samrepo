@@ -3,7 +3,7 @@
         "moduleName": "internet_gateway",
         "variableName": "vpc_id",
         "type": "InternetGateway",
-        "mappingFieldName": "vpcId",
+        "mappingFieldName": "attachments.vpcId",
         "isReferenceVariable": true,
         "mappingModuleName": "vpc",
         "mappingModuleRef": "vpcId",
