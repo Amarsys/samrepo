@@ -19,8 +19,9 @@ module "subnet_24" {
 
 module "nat_gateway_1" {
  source ="./modules/nat_gateway"
-  subnet_id = module.subnet_24.id
-  tags      = {
+  nat_gateway_id = "nat-03124bae3c96ec462"
+  subnet_id      = module.subnet_24.id
+  tags           = {
     "aws:cloudformation:stack-name" = "eksctl-kaiburr-cluster-cluster"
     "alpha.eksctl.io/cluster-name" = "kaiburr-cluster"
     "aws:cloudformation:stack-id" = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburr-cluster-cluster/ac75a270-a70c-11ed-9155-12447c80f821"
@@ -34,8 +35,9 @@ module "nat_gateway_1" {
 
 module "nat_gateway_2" {
  source ="./modules/nat_gateway"
-  subnet_id = module.subnet_14.id
-  tags      = {
+  nat_gateway_id = "nat-0f36b6713b247696a"
+  subnet_id      = module.subnet_14.id
+  tags           = {
     "aws:cloudformation:stack-name" = "eksctl-kaiburrEks-cluster"
     "alpha.eksctl.io/cluster-name" = "kaiburrEks"
     "aws:cloudformation:stack-id" = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburrEks-cluster/9c9ee500-ac7a-11ed-994f-0af03e412367"
