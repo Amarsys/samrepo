@@ -485,7 +485,7 @@ module "nat_gateway_3" {
 
 module "internet_gateway_1" {
   source = "./modules/internet_gateway"
-  vpc_id = "[vpc-07452964709d9cc87]"
+  vpc_id = module.vpc_3.id
   tags = {
     "aws:cloudformation:logical-id"               = "InternetGateway"
     "alpha.eksctl.io/eksctl-version"              = "0.127.0"
@@ -500,7 +500,7 @@ module "internet_gateway_1" {
 
 module "internet_gateway_2" {
   source = "./modules/internet_gateway"
-  vpc_id = "[vpc-03811f75a97cffa86]"
+  vpc_id = module.vpc_2.id
   tags = {
     "alpha.eksctl.io/cluster-name"                = "kaiburr-cluster"
     "eksctl.cluster.k8s.io/v1alpha1/cluster-name" = "kaiburr-cluster"
@@ -515,7 +515,7 @@ module "internet_gateway_2" {
 
 module "internet_gateway_3" {
   source = "./modules/internet_gateway"
-  vpc_id = "[vpc-0a18e3337585e7f2d]"
+  vpc_id = module.vpc_4.id
   tags = {
     "alpha.eksctl.io/eksctl-version"              = "0.127.0"
     "aws:cloudformation:logical-id"               = "InternetGateway"
@@ -530,7 +530,7 @@ module "internet_gateway_3" {
 
 module "internet_gateway_4" {
   source = "./modules/internet_gateway"
-  vpc_id = "[vpc-ca1dbeb7]"
+  vpc_id = module.vpc_1.id
 }
 
 module "nat_route_table_1" {
