@@ -17,5 +17,6 @@
 ],[
   "moduleName": "nat_route_table",
   "type": "RouteTable",
-  "moduleRefs": ["routeTableId"]
+  "moduleRefs": ["routeTableId"],
+  "mandatoryVariables": ["nat_gateway_id"]
 ]]
