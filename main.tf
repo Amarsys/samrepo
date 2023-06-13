@@ -439,8 +439,9 @@ module "subnet_24" {
 }
 
 module "nat_gateway_1" {
-  source    = "./modules/nat_gateway"
-  subnet_id = module.subnet_24.id
+  source         = "./modules/nat_gateway"
+  nat_gateway_id = "nat-03124bae3c96ec462"
+  subnet_id      = module.subnet_24.id
   tags = {
     "aws:cloudformation:stack-name"               = "eksctl-kaiburr-cluster-cluster"
     "alpha.eksctl.io/cluster-name"                = "kaiburr-cluster"
@@ -454,8 +455,9 @@ module "nat_gateway_1" {
 }
 
 module "nat_gateway_2" {
-  source    = "./modules/nat_gateway"
-  subnet_id = module.subnet_14.id
+  source         = "./modules/nat_gateway"
+  nat_gateway_id = "nat-0f36b6713b247696a"
+  subnet_id      = module.subnet_14.id
   tags = {
     "aws:cloudformation:stack-name"               = "eksctl-kaiburrEks-cluster"
     "alpha.eksctl.io/cluster-name"                = "kaiburrEks"
@@ -469,8 +471,9 @@ module "nat_gateway_2" {
 }
 
 module "nat_gateway_3" {
-  source    = "./modules/nat_gateway"
-  subnet_id = module.subnet_3.id
+  source         = "./modules/nat_gateway"
+  nat_gateway_id = "nat-05cd4bbaadf4d0d59"
+  subnet_id      = module.subnet_3.id
   tags = {
     "aws:cloudformation:stack-name"               = "eksctl-kaiburr-eks-cluster"
     "alpha.eksctl.io/cluster-name"                = "kaiburr-eks"
@@ -484,8 +487,9 @@ module "nat_gateway_3" {
 }
 
 module "internet_gateway_1" {
-  source = "./modules/internet_gateway"
-  vpc_id = module.vpc_3.id
+  source     = "./modules/internet_gateway"
+  gateway_id = "igw-0215bdec00ad5feab"
+  vpc_id     = module.vpc_3.id
   tags = {
     "aws:cloudformation:logical-id"               = "InternetGateway"
     "alpha.eksctl.io/eksctl-version"              = "0.127.0"
@@ -499,8 +503,9 @@ module "internet_gateway_1" {
 }
 
 module "internet_gateway_2" {
-  source = "./modules/internet_gateway"
-  vpc_id = module.vpc_2.id
+  source     = "./modules/internet_gateway"
+  gateway_id = "igw-028572ac3629d2854"
+  vpc_id     = module.vpc_2.id
   tags = {
     "alpha.eksctl.io/cluster-name"                = "kaiburr-cluster"
     "eksctl.cluster.k8s.io/v1alpha1/cluster-name" = "kaiburr-cluster"
@@ -514,8 +519,9 @@ module "internet_gateway_2" {
 }
 
 module "internet_gateway_3" {
-  source = "./modules/internet_gateway"
-  vpc_id = module.vpc_4.id
+  source     = "./modules/internet_gateway"
+  gateway_id = "igw-0e65dd3b705aa4069"
+  vpc_id     = module.vpc_4.id
   tags = {
     "alpha.eksctl.io/eksctl-version"              = "0.127.0"
     "aws:cloudformation:logical-id"               = "InternetGateway"
@@ -529,8 +535,9 @@ module "internet_gateway_3" {
 }
 
 module "internet_gateway_4" {
-  source = "./modules/internet_gateway"
-  vpc_id = module.vpc_1.id
+  source     = "./modules/internet_gateway"
+  gateway_id = "igw-17a5b36c"
+  vpc_id     = module.vpc_1.id
 }
 
 module "nat_route_table_1" {
