@@ -18,7 +18,8 @@
         "isReferenceVariable": true,
         "mappingModuleName": "vpc",
         "mappingModuleRef": "vpcId",
-        "referenceKey": "id"
+        "referenceKey": "id",
+        "isMandatoryVariable": true
     ],
     [
         "moduleName": "nat_route_table",
