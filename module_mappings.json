@@ -18,4 +18,8 @@
   "moduleName": "nat_route_table",
   "type": "RouteTable",
   "moduleRefs": ["routeTableId"]
+],[
+  "moduleName": "igw_route_table",
+  "type": "RouteTable",
+  "moduleRefs": ["routeTableId"]
 ]]
