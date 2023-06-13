@@ -7,7 +7,8 @@
         "isReferenceVariable": true,
         "mappingModuleName": "vpc",
         "mappingModuleRef": "vpcId",
-        "referenceKey": "id"
+        "referenceKey": "id",
+        "isMandatoryVariable": true
     ],
     [
         "moduleName": "igw_route_table",
@@ -17,7 +18,8 @@
         "isReferenceVariable": true,
         "mappingModuleName": "internet_gateway",
         "mappingModuleRef": "internetGatewayId",
-        "referenceKey": "igw_id"
+        "referenceKey": "igw_id",
+        "isMandatoryVariable": true
     ],
     [
         "moduleName": "igw_route_table",
