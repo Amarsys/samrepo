@@ -1,14 +1,14 @@
-[{
+[[
     "moduleName": "vpc",
     "variableName": "vpc_cidr",
     "type": "Vpc",
     "mappingFieldName": "cidrBlock",
-    "get_value_from_module_output": false
-},
-{
+    "isReferenceVariable": false
+],
+[
     "moduleName": "vpc",
     "variableName": "tags",
     "type": "Vpc",
     "mappingFieldName": "tags",
-    "get_value_from_module_output": false
-}]
+    "isReferenceVariable": false
+]]

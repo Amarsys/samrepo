@@ -1,16 +1,19 @@
 [
-    {
+    [
         "moduleName": "nat_gateway",
         "variableName": "subnet_id",
         "type": "NatGateway",
-        "mappingFieldName": "module.nat_subnet.id",
-        "get_value_from_module_output": true
-    },
-    {
+        "mappingFieldName": "subnetId",
+        "isReferenceVariable": true,
+        "mappingModuleName": "subnet",
+        "mappingModuleRef": "subnetId",
+        "referenceKey": "id"
+    ],
+    [
         "moduleName": "nat_gateway",
         "variableName": "tags",
         "type": "NatGateway",
-        "mappingFieldName": ".[0].dataObject.tags",
-        "get_value_from_module_output": false
-    }
+        "mappingFieldName": "tags",
+        "isReferenceVariable": false
+    ]
 ]
