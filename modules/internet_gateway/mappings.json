@@ -1,7 +1,7 @@
 [
     [
         "moduleName": "internet_gateway",
-        "variableName": "internet_gateway_id",
+        "variableName": "gateway_id",
         "type": "InternetGateway",
         "mappingFieldName": "internetGatewayId",
         "isReferenceVariable": false
