@@ -4,7 +4,10 @@
         "variableName": "vpc_id",
         "type": "InternetGateway",
         "mappingFieldName": "attachments.vpcId",
-        "isReferenceVariable": false,
+        "isReferenceVariable": true,
+        "mappingModuleName": "vpc",
+        "mappingModuleRef": "vpcId",
+        "referenceKey": "id"
     ],
     [
         "moduleName": "internet_gateway",
