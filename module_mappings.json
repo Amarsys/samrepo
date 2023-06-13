@@ -2,7 +2,7 @@
   "moduleName": "vpc",
   "type": "Vpc", 
   "moduleRefs": ["vpcId"]
-][
+],[
   "moduleName": "internet_gateway",
   "type": "InternetGateway",
   "moduleRefs": ["internetGatewayId"]
