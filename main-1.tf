@@ -3,7 +3,7 @@ module "vpc_1" {
   vpc_cidr = "172.31.0.0/16"
 }
 
-module "vpc_2" {
+module "vpc_3" {
  source ="./modules/vpc"
   vpc_cidr = "192.168.0.0/16"
   tags     = {
@@ -18,7 +18,7 @@ module "vpc_2" {
   }
 }
 
-module "vpc_3" {
+module "vpc_5" {
  source ="./modules/vpc"
   vpc_cidr = "192.168.0.0/16"
   tags     = {
