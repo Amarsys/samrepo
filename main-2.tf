@@ -13,41 +13,33 @@ module "vpc_4" {
   }
 }
 
-module "subnet_1" {
- source ="./modules/subnet"
-  cidr_block              = "192.168.128.0/19"
-  map_public_ip_on_launch = false
-  vpc_id                  = module.vpc_4.id
-  az                      = "use1-az1"
-  tags                    = {
-    "aws:cloudformation:logical-id" = "SubnetPrivateUSEAST1B"
-    "kubernetes.io/role/internal-elb" = "1"
-    "aws:cloudformation:stack-name" = "eksctl-kaiburrEks-cluster"
-    "Name" = "eksctl-kaiburrEks-cluster/SubnetPrivateUSEAST1B"
-    "alpha.eksctl.io/cluster-name" = "kaiburrEks"
+module "internet_gateway_1" {
+ source ="./modules/internet_gateway"
+  vpc_id = module.vpc_3.id
+  tags   = {
+    "aws:cloudformation:logical-id" = "InternetGateway"
     "alpha.eksctl.io/eksctl-version" = "0.127.0"
     "alpha.eksctl.io/cluster-oidc-enabled" = "true"
-    "eksctl.cluster.k8s.io/v1alpha1/cluster-name" = "kaiburrEks"
-    "aws:cloudformation:stack-id" = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburrEks-cluster/9c9ee500-ac7a-11ed-994f-0af03e412367"
+    "aws:cloudformation:stack-id" = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburr-eks-cluster/b3e45610-a251-11ed-8758-1297053ce6d9"
+    "Name" = "eksctl-kaiburr-eks-cluster/InternetGateway"
+    "aws:cloudformation:stack-name" = "eksctl-kaiburr-eks-cluster"
+    "eksctl.cluster.k8s.io/v1alpha1/cluster-name" = "kaiburr-eks"
+    "alpha.eksctl.io/cluster-name" = "kaiburr-eks"
   }
 }
 
-module "subnet_2" {
- source ="./modules/subnet"
-  cidr_block              = "192.168.96.0/19"
-  map_public_ip_on_launch = false
-  vpc_id                  = module.vpc_2.id
-  az                      = "use1-az6"
-  tags                    = {
-    "aws:cloudformation:stack-id" = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburr-cluster-cluster/ac75a270-a70c-11ed-9155-12447c80f821"
-    "alpha.eksctl.io/cluster-oidc-enabled" = "true"
-    "alpha.eksctl.io/eksctl-version" = "0.127.0"
-    "eksctl.cluster.k8s.io/v1alpha1/cluster-name" = "kaiburr-cluster"
-    "Name" = "eksctl-kaiburr-cluster-cluster/SubnetPrivateUSEAST1A"
+module "internet_gateway_2" {
+ source ="./modules/internet_gateway"
+  vpc_id = module.vpc_2.id
+  tags   = {
     "alpha.eksctl.io/cluster-name" = "kaiburr-cluster"
+    "eksctl.cluster.k8s.io/v1alpha1/cluster-name" = "kaiburr-cluster"
+    "alpha.eksctl.io/cluster-oidc-enabled" = "true"
+    "aws:cloudformation:logical-id" = "InternetGateway"
+    "aws:cloudformation:stack-id" = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburr-cluster-cluster/ac75a270-a70c-11ed-9155-12447c80f821"
+    "alpha.eksctl.io/eksctl-version" = "0.127.0"
+    "Name" = "eksctl-kaiburr-cluster-cluster/InternetGateway"
     "aws:cloudformation:stack-name" = "eksctl-kaiburr-cluster-cluster"
-    "aws:cloudformation:logical-id" = "SubnetPrivateUSEAST1A"
-    "kubernetes.io/role/internal-elb" = "1"
   }
 }
 
