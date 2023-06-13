@@ -1,16 +1,31 @@
 [
-    {
+    [
         "moduleName": "route_table_association",
         "variableName": "subnet_ids",
-        "type": "",
-        "mappingFieldName": "",
-        "get_value_from_module_output": false
-    },
-    {
+        "type": "RouteTable",
+        "mappingFieldName": "subnet_ids",
+        "isReferenceVariable": true,
+        "mappingModuleName": "subnet",
+        "mappingModuleRef": "subnetId",
+        "referenceKey": "subnet_id",
+        "isMandatoryVariable": true
+    ],
+    [
         "moduleName": "route_table_association",
         "variableName": "route_table_id",
-        "type": "",
-        "mappingFieldName": "",
-        "get_value_from_module_output": false
-    }
+        "type": "RouteTable",
+        "mappingFieldName": "routeTableId",
+        "isReferenceVariable": true,
+        "mappingModuleName": "nat_route_table",
+        "mappingModuleRef": "routeTableId",
+        "referenceKey": "route_table_id",
+        "isMandatoryVariable": true
+    ],
+    [
+        "moduleName": "route_table_association",
+        "variableName": "tags",
+        "type": "RouteTable",
+        "mappingFieldName": "tags",
+        "isReferenceVariable": false
+    ]
 ]
