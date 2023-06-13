@@ -1,13 +1,6 @@
 [
     [
         "moduleName": "internet_gateway",
-        "variableName": "gateway_id",
-        "type": "InternetGateway",
-        "mappingFieldName": "internetGatewayId",
-        "isReferenceVariable": false
-    ],
-    [
-        "moduleName": "internet_gateway",
         "variableName": "vpc_id",
         "type": "InternetGateway",
         "mappingFieldName": "attachments.vpcId",
