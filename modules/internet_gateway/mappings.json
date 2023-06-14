@@ -7,7 +7,13 @@
         "isReferenceVariable": true,
         "mappingModuleName": "vpc",
         "mappingModuleRef": "vpcId",
-        "referenceKey": "id"
+        "referenceKey": "id",        
+        "templateDefinitions": [
+            "templateId": "1",
+            "loopThrough": "attachments",
+            "containsField": "vpcId",
+            "startsWith": ""
+        ]
     ],
     [
         "moduleName": "internet_gateway",
