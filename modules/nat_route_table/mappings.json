@@ -8,7 +8,13 @@
         "mappingModuleName": "nat_gateway",
         "mappingModuleRef": "natGatewayId",
         "referenceKey": "id",
-        "isMandatoryVariable": true
+        "isMandatoryVariable": true,        
+        "templateDefinitions": [
+            "templateId": "1",
+            "loopThrough": "routes",
+            "containsField": "natGatewayId",
+            "startsWith": "nat-"
+        ]
     ],
     [
         "moduleName": "nat_route_table",
