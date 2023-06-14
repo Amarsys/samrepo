@@ -734,7 +734,7 @@ module "igw_route_table_7" {
 module "route_table_association_6" {
   source = "./modules/route_table_association"
   subnet_ids = {
-    subnet_1 = module.subnet_17.subnet_id
+    subnet_1 = module.subnet_17.id
   }
   route_table_id = module.nat_route_table_6.route_table_id
 }
@@ -742,7 +742,7 @@ module "route_table_association_6" {
 module "route_table_association_8" {
   source = "./modules/route_table_association"
   subnet_ids = {
-    subnet_1 = module.subnet_5.subnet_id
+    subnet_1 = module.subnet_5.id
   }
   route_table_id = module.nat_route_table_8.route_table_id
 }
@@ -750,7 +750,7 @@ module "route_table_association_8" {
 module "route_table_association_9" {
   source = "./modules/route_table_association"
   subnet_ids = {
-    subnet_1 = module.subnet_1.subnet_id
+    subnet_1 = module.subnet_1.id
   }
   route_table_id = module.nat_route_table_9.route_table_id
 }
@@ -758,7 +758,7 @@ module "route_table_association_9" {
 module "route_table_association_10" {
   source = "./modules/route_table_association"
   subnet_ids = {
-    subnet_1 = module.subnet_22.subnet_id
+    subnet_1 = module.subnet_22.id
   }
   route_table_id = module.nat_route_table_10.route_table_id
 }
@@ -766,7 +766,7 @@ module "route_table_association_10" {
 module "route_table_association_11" {
   source = "./modules/route_table_association"
   subnet_ids = {
-    subnet_1 = module.subnet_15.subnet_id
+    subnet_1 = module.subnet_15.id
   }
   route_table_id = module.nat_route_table_11.route_table_id
 }
@@ -774,7 +774,7 @@ module "route_table_association_11" {
 module "route_table_association_12" {
   source = "./modules/route_table_association"
   subnet_ids = {
-    subnet_1 = module.subnet_19.subnet_id
+    subnet_1 = module.subnet_19.id
   }
   route_table_id = module.nat_route_table_12.route_table_id
 }
@@ -782,7 +782,7 @@ module "route_table_association_12" {
 module "route_table_association_13" {
   source = "./modules/route_table_association"
   subnet_ids = {
-    subnet_1 = module.subnet_2.subnet_id
+    subnet_1 = module.subnet_2.id
   }
   route_table_id = module.nat_route_table_13.route_table_id
 }
@@ -790,7 +790,7 @@ module "route_table_association_13" {
 module "route_table_association_14" {
   source = "./modules/route_table_association"
   subnet_ids = {
-    subnet_1 = module.subnet_8.subnet_id
+    subnet_1 = module.subnet_8.id
   }
   route_table_id = module.nat_route_table_14.route_table_id
 }
@@ -798,7 +798,7 @@ module "route_table_association_14" {
 module "route_table_association_16" {
   source = "./modules/route_table_association"
   subnet_ids = {
-    subnet_1 = module.subnet_20.subnet_id
+    subnet_1 = module.subnet_20.id
   }
   route_table_id = module.nat_route_table_16.route_table_id
 }
