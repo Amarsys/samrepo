@@ -7,7 +7,7 @@
         "isReferenceVariable": true,
         "mappingModuleName": "subnet",
         "mappingModuleRef": "subnetId",
-        "referenceKey": "subnet_id",
+        "referenceKey": "id",
         "isMandatoryVariable": true
     ],
     [
