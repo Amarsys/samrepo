@@ -20,12 +20,5 @@
         "mappingModuleRef": "routeTableId",
         "referenceKey": "route_table_id",
         "isMandatoryVariable": true
-    ],
-    [
-        "moduleName": "route_table_association",
-        "variableName": "tags",
-        "type": "RouteTable",
-        "mappingFieldName": "tags",
-        "isReferenceVariable": false
     ]
 ]
