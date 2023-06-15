@@ -3,14 +3,14 @@
   "type": "Vpc", 
   "moduleRefs": ["vpcId"],
   "resourceLogicalMapping": [
-    "vpc": "vpcId"
+    "aws_vpc.vpc": "vpcId"
   ]
 ],[
   "moduleName": "subnet",
   "type": "Subnet",
   "moduleRefs": ["subnetId"],
   "resourceLogicalMapping": [
-    "subnet": "subnetId"
+    "aws_subnet.subnet": "subnetId"
   ]
 ],[
   "moduleName": "nat_gateway",
