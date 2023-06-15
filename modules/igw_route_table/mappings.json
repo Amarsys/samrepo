@@ -21,7 +21,7 @@
         "mappingModuleRef": "internetGatewayId",
         "referenceKey": "igw_id",
         "isMandatoryVariable": true,
-        "isRootModuleEnabled": true   
+        "isRootModuleEnabled": true,
         "templateDefinitions": [
             "templateId": "1",
             "loopThrough": "routes",
