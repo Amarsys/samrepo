@@ -17,7 +17,7 @@
   "type": "NatGateway",
   "moduleRefs": ["natGatewayId"],
   "resourceLogicalMapping": [
-    "aws_eip.nat_eip": "publicIp",
+    "aws_eip.nat_eip": "public_ip",
     "aws_nat_gateway.nat": "natGatewayId"
   ]
 ],[
