@@ -7,7 +7,8 @@
         "isReferenceVariable": true,
         "mappingModuleName": "vpc",
         "mappingModuleRef": "vpcId",
-        "referenceKey": "id",        
+        "referenceKey": "id",
+        "isRootModuleEnabled": true,
         "templateDefinitions": [
             "templateId": "1",
             "loopThrough": "attachments",
@@ -20,6 +21,7 @@
         "variableName": "tags",
         "type": "InternetGateway",
         "mappingFieldName": "tags",
-        "isReferenceVariable": false
+        "isReferenceVariable": false,
+        "isRootModuleEnabled": true
     ]
 ]
