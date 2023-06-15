@@ -3,12 +3,14 @@
     "variableName": "vpc_cidr",
     "type": "Vpc",
     "mappingFieldName": "cidrBlock",
-    "isReferenceVariable": false
+    "isReferenceVariable": false,
+    "isRootModuleEnabled": true
 ],
 [
     "moduleName": "vpc",
     "variableName": "tags",
     "type": "Vpc",
     "mappingFieldName": "tags",
-    "isReferenceVariable": false
+    "isReferenceVariable": false,
+    "isRootModuleEnabled": true
 ]]
