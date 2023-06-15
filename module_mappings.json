@@ -1,29 +1,36 @@
 [[
   "moduleName": "vpc",
   "type": "Vpc", 
-  "moduleRefs": ["vpcId"]
+  "moduleRefs": ["vpcId"],
+  "uniqueId": "vpcId"
 ],[
   "moduleName": "subnet",
   "type": "Subnet",
-  "moduleRefs": ["subnetId"]
+  "moduleRefs": ["subnetId"],
+  "uniqueId": "subnetId"
 ],[
   "moduleName": "nat_gateway",
   "type": "NatGateway",
-  "moduleRefs": ["natGatewayId"]
+  "moduleRefs": ["natGatewayId"],
+  "uniqueId": "natGatewayId"
 ],[
   "moduleName": "internet_gateway",
   "type": "InternetGateway",
-  "moduleRefs": ["internetGatewayId"]
+  "moduleRefs": ["internetGatewayId"],
+  "uniqueId": "internetGatewayId"
 ],[
   "moduleName": "nat_route_table",
   "type": "RouteTable",
-  "moduleRefs": ["routeTableId"]
+  "moduleRefs": ["routeTableId"],
+  "uniqueId": "routeTableId"
 ],[
   "moduleName": "igw_route_table",
   "type": "RouteTable",
-  "moduleRefs": ["routeTableId"]
+  "moduleRefs": ["routeTableId"],
+  "uniqueId": "routeTableId"
 ],[
   "moduleName": "route_table_association",
   "type": "RouteTable",
-  "moduleRefs": ["routeTableId"]
+  "moduleRefs": ["routeTableId"],
+  "uniqueId": "routeTableId"
 ]]
