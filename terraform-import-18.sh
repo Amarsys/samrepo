@@ -1,0 +1,3 @@
+terraform import module.route_table_association_10 rtb-05cc63256aba18e9b
+terraform import module.route_table_association_11 rtb-0b7b8113a22090948
+terraform import module.route_table_association_12 rtb-0601a2d557c2adf8c
