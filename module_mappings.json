@@ -2,35 +2,49 @@
   "moduleName": "vpc",
   "type": "Vpc", 
   "moduleRefs": ["vpcId"],
-  "importId": "vpcId"
+  "resourceLogicalMapping": [
+    "vpc": ["vpcId"]
+  ]
 ],[
   "moduleName": "subnet",
   "type": "Subnet",
   "moduleRefs": ["subnetId"],
-  "importId": "subnetId"
+  "resourceLogicalMapping": [
+    "subnet": ["subnetId"]
+  ]
 ],[
   "moduleName": "nat_gateway",
   "type": "NatGateway",
   "moduleRefs": ["natGatewayId"],
-  "importId": "natGatewayId"
+  "resourceLogicalMapping": [
+    "aws_eip.nat_eip": "publicIp"
+  ]
 ],[
   "moduleName": "internet_gateway",
   "type": "InternetGateway",
   "moduleRefs": ["internetGatewayId"],
-  "importId": "internetGatewayId"
+  "resourceLogicalMapping": [
+    "aws_internet_gateway.igw": ["internetGatewayId"]
+  ]
 ],[
   "moduleName": "nat_route_table",
   "type": "RouteTable",
   "moduleRefs": ["routeTableId"],
-  "importId": "routeTableId"
+  "resourceLogicalMapping": [
+    "aws_route_table.route_table": ["routeTableId"]
+  ]
 ],[
   "moduleName": "igw_route_table",
   "type": "RouteTable",
   "moduleRefs": ["routeTableId"],
-  "importId": "routeTableId"
+  "resourceLogicalMapping": [
+    "aws_route_table.route_table": ["routeTableId"]
+  ]
 ],[
   "moduleName": "route_table_association",
   "type": "RouteTable",
   "moduleRefs": ["routeTableId"],
-  "importId": "routeTableId"
+  "resourceLogicalMapping": [
+    "aws_route_table_association.route_table_association": ["subnetId", "/", "routeTableId"]
+  ]
 ]]
