@@ -8,7 +8,8 @@
         "mappingModuleName": "nat_gateway",
         "mappingModuleRef": "natGatewayId",
         "referenceKey": "id",
-        "isMandatoryVariable": true,        
+        "isMandatoryVariable": true,
+        "isRootModuleEnabled": true,      
         "templateDefinitions": [
             "templateId": "1",
             "loopThrough": "routes",
@@ -25,13 +26,15 @@
         "mappingModuleName": "vpc",
         "mappingModuleRef": "vpcId",
         "referenceKey": "id",
-        "isMandatoryVariable": true
+        "isMandatoryVariable": true,
+        "isRootModuleEnabled": true
     ],
     [
         "moduleName": "nat_route_table",
         "variableName": "tags",
         "type": "RouteTable",
         "mappingFieldName": "tags",
-        "isReferenceVariable": false
+        "isReferenceVariable": false,
+        "isRootModuleEnabled": true
     ]
 ]
