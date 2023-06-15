@@ -1,3 +1,0 @@
-terraform import module.nat_route_table_11 rtb-0b7b8113a22090948
-terraform import module.nat_route_table_12 rtb-0601a2d557c2adf8c
-terraform import module.nat_route_table_13 rtb-01403800ddff03862
