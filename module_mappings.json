@@ -2,35 +2,35 @@
   "moduleName": "vpc",
   "type": "Vpc", 
   "moduleRefs": ["vpcId"],
-  "uniqueId": "vpcId"
+  "importId": "vpcId"
 ],[
   "moduleName": "subnet",
   "type": "Subnet",
   "moduleRefs": ["subnetId"],
-  "uniqueId": "subnetId"
+  "importId": "subnetId"
 ],[
   "moduleName": "nat_gateway",
   "type": "NatGateway",
   "moduleRefs": ["natGatewayId"],
-  "uniqueId": "natGatewayId"
+  "importId": "natGatewayId"
 ],[
   "moduleName": "internet_gateway",
   "type": "InternetGateway",
   "moduleRefs": ["internetGatewayId"],
-  "uniqueId": "internetGatewayId"
+  "importId": "internetGatewayId"
 ],[
   "moduleName": "nat_route_table",
   "type": "RouteTable",
   "moduleRefs": ["routeTableId"],
-  "uniqueId": "routeTableId"
+  "importId": "routeTableId"
 ],[
   "moduleName": "igw_route_table",
   "type": "RouteTable",
   "moduleRefs": ["routeTableId"],
-  "uniqueId": "routeTableId"
+  "importId": "routeTableId"
 ],[
   "moduleName": "route_table_association",
   "type": "RouteTable",
   "moduleRefs": ["routeTableId"],
-  "uniqueId": "routeTableId"
+  "importId": "routeTableId"
 ]]
