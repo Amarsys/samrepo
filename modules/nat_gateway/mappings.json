@@ -7,13 +7,23 @@
         "isReferenceVariable": true,
         "mappingModuleName": "subnet",
         "mappingModuleRef": "subnetId",
-        "referenceKey": "id"
+        "referenceKey": "id",
+        "isRootModuleEnabled": true
+    ],
+    [
+        "moduleName": "nat_gateway",
+        "variableName": "publicIp",
+        "type": "NatGateway",
+        "mappingFieldName": "publicIp",
+        "isReferenceVariable": false,
+        "isRootModuleEnabled": false
     ],
     [
         "moduleName": "nat_gateway",
         "variableName": "tags",
         "type": "NatGateway",
         "mappingFieldName": "tags",
-        "isReferenceVariable": false
+        "isReferenceVariable": false,
+        "isRootModuleEnabled": true
     ]
 ]
