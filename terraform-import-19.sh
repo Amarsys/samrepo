@@ -1,3 +1,0 @@
-associations.subnetId/routeTableId
-associations.subnetId/routeTableId
-associations.subnetId/routeTableId
