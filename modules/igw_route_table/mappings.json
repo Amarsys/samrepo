@@ -8,7 +8,8 @@
         "mappingModuleName": "vpc",
         "mappingModuleRef": "vpcId",
         "referenceKey": "id",
-        "isMandatoryVariable": true
+        "isMandatoryVariable": true,
+        "isRootModuleEnabled": true
     ],
     [
         "moduleName": "igw_route_table",
@@ -19,7 +20,8 @@
         "mappingModuleName": "internet_gateway",
         "mappingModuleRef": "internetGatewayId",
         "referenceKey": "igw_id",
-        "isMandatoryVariable": true,        
+        "isMandatoryVariable": true,
+        "isRootModuleEnabled": true   
         "templateDefinitions": [
             "templateId": "1",
             "loopThrough": "routes",
@@ -32,6 +34,7 @@
         "variableName": "tags",
         "type": "RouteTable",
         "mappingFieldName": "tags",
-        "isReferenceVariable": false
+        "isReferenceVariable": false,
+        "isRootModuleEnabled": true
     ]
 ]
