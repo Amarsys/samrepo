@@ -12,7 +12,7 @@
     ],
     [
         "moduleName": "nat_gateway",
-        "variableName": "public_ip",
+        "variableName": "aws_eip.nat_eip",
         "type": "NatGateway",
         "mappingFieldName": "publicIp",
         "isReferenceVariable": false,
