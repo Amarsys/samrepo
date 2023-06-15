@@ -1,0 +1,3 @@
+terraform import module.internet_gateway_3 igw-0e65dd3b705aa4069
+terraform import module.internet_gateway_4 igw-17a5b36c
+terraform import module.nat_route_table_6 rtb-0f402c5143c95eb75
