@@ -1,0 +1,3 @@
+terraform import module.subnet_24 subnet-06922b7e140c164fb
+terraform import module.nat_gateway_1 nat-03124bae3c96ec462
+terraform import module.nat_gateway_2 nat-0f36b6713b247696a
