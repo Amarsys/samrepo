@@ -635,12 +635,51 @@ module "igw_route_table_7" {
   }
 }
 
+module "route_table_association_1" {
+  source = "./modules/route_table_association"
+}
+
+module "route_table_association_2" {
+  source = "./modules/route_table_association"
+  subnet_ids = {
+    subnet_1 = module.subnet_2.id
+    subnet_2 = module.subnet_22.id
+    subnet_3 = module.subnet_5.id
+  }
+}
+
+module "route_table_association_3" {
+  source = "./modules/route_table_association"
+  subnet_ids = {
+    subnet_1 = module.subnet_6.id
+    subnet_2 = module.subnet_11.id
+    subnet_3 = module.subnet_16.id
+  }
+}
+
+module "route_table_association_4" {
+  source = "./modules/route_table_association"
+}
+
+module "route_table_association_5" {
+  source = "./modules/route_table_association"
+}
+
 module "route_table_association_6" {
   source = "./modules/route_table_association"
   subnet_ids = {
     subnet_1 = module.subnet_8.id
   }
   route_table_id = module.nat_route_table_6.route_table_id
+}
+
+module "route_table_association_7" {
+  source = "./modules/route_table_association"
+  subnet_ids = {
+    subnet_1 = module.subnet_20.id
+    subnet_2 = module.subnet_4.id
+    subnet_3 = module.subnet_14.id
+  }
 }
 
 module "route_table_association_8" {
@@ -697,6 +736,14 @@ module "route_table_association_14" {
     subnet_1 = module.subnet_3.id
   }
   route_table_id = module.nat_route_table_14.route_table_id
+}
+
+module "route_table_association_15" {
+  source = "./modules/route_table_association"
+}
+
+module "route_table_association_16" {
+  source = "./modules/route_table_association"
 }
 
 module "route_table_association_17" {
