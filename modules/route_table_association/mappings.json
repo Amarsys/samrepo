@@ -8,7 +8,7 @@
         "mappingModuleName": "subnet",
         "mappingModuleRef": "subnetId",
         "referenceKey": "id",
-        "isMandatoryVariable": true,
+        "isMandatoryVariable": false,
         "isRootModuleEnabled": true
     ],
     [
@@ -20,7 +20,7 @@
         "mappingModuleName": "nat_route_table",
         "mappingModuleRef": "routeTableId",
         "referenceKey": "route_table_id",
-        "isMandatoryVariable": true,
+        "isMandatoryVariable": false,
         "isRootModuleEnabled": true
     ],
     [
