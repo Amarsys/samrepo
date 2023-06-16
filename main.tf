@@ -53,7 +53,7 @@ module "subnet_1" {
   cidr_block              = "192.168.128.0/19"
   map_public_ip_on_launch = false
   vpc_id                  = module.vpc_4.id
-  az                      = "use1-az1"
+  az                      = "us-east-1b"
   tags = {
     "aws:cloudformation:logical-id"               = "SubnetPrivateUSEAST1B"
     "kubernetes.io/role/internal-elb"             = "1"
@@ -72,7 +72,7 @@ module "subnet_2" {
   cidr_block              = "192.168.96.0/19"
   map_public_ip_on_launch = false
   vpc_id                  = module.vpc_2.id
-  az                      = "use1-az6"
+  az                      = "us-east-1a"
   tags = {
     "aws:cloudformation:stack-id"                 = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburr-cluster-cluster/ac75a270-a70c-11ed-9155-12447c80f821"
     "alpha.eksctl.io/cluster-oidc-enabled"        = "true"
@@ -91,7 +91,7 @@ module "subnet_3" {
   cidr_block              = "192.168.0.0/19"
   map_public_ip_on_launch = true
   vpc_id                  = module.vpc_3.id
-  az                      = "use1-az6"
+  az                      = "us-east-1a"
   tags = {
     "alpha.eksctl.io/eksctl-version"              = "0.127.0"
     "alpha.eksctl.io/cluster-name"                = "kaiburr-eks"
@@ -110,7 +110,7 @@ module "subnet_4" {
   cidr_block              = "192.168.32.0/19"
   map_public_ip_on_launch = true
   vpc_id                  = module.vpc_4.id
-  az                      = "use1-az1"
+  az                      = "us-east-1b"
   tags = {
     "aws:cloudformation:stack-id"                 = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburrEks-cluster/9c9ee500-ac7a-11ed-994f-0af03e412367"
     "kubernetes.io/role/elb"                      = "1"
@@ -129,7 +129,7 @@ module "subnet_5" {
   cidr_block              = "192.168.160.0/19"
   map_public_ip_on_launch = false
   vpc_id                  = module.vpc_2.id
-  az                      = "use1-az2"
+  az                      = "us-east-1c"
   tags = {
     "Name"                                        = "eksctl-kaiburr-cluster-cluster/SubnetPrivateUSEAST1C"
     "kubernetes.io/role/internal-elb"             = "1"
@@ -148,7 +148,7 @@ module "subnet_6" {
   cidr_block              = "172.31.80.0/20"
   map_public_ip_on_launch = true
   vpc_id                  = module.vpc_1.id
-  az                      = "use1-az2"
+  az                      = "us-east-1c"
 }
 
 module "subnet_7" {
@@ -156,7 +156,7 @@ module "subnet_7" {
   cidr_block              = "172.31.32.0/20"
   map_public_ip_on_launch = true
   vpc_id                  = module.vpc_1.id
-  az                      = "use1-az6"
+  az                      = "us-east-1a"
 }
 
 module "subnet_8" {
@@ -164,7 +164,7 @@ module "subnet_8" {
   cidr_block              = "192.168.160.0/19"
   map_public_ip_on_launch = false
   vpc_id                  = module.vpc_4.id
-  az                      = "use1-az2"
+  az                      = "us-east-1c"
   tags = {
     "alpha.eksctl.io/cluster-oidc-enabled"        = "true"
     "Name"                                        = "eksctl-kaiburrEks-cluster/SubnetPrivateUSEAST1C"
@@ -183,7 +183,7 @@ module "subnet_9" {
   cidr_block              = "192.168.64.0/19"
   map_public_ip_on_launch = true
   vpc_id                  = module.vpc_2.id
-  az                      = "use1-az2"
+  az                      = "us-east-1c"
   tags = {
     "eksctl.cluster.k8s.io/v1alpha1/cluster-name" = "kaiburr-cluster"
     "alpha.eksctl.io/cluster-name"                = "kaiburr-cluster"
@@ -202,7 +202,7 @@ module "subnet_10" {
   cidr_block              = "192.168.32.0/19"
   map_public_ip_on_launch = true
   vpc_id                  = module.vpc_2.id
-  az                      = "use1-az1"
+  az                      = "us-east-1b"
   tags = {
     "alpha.eksctl.io/eksctl-version"              = "0.127.0"
     "alpha.eksctl.io/cluster-oidc-enabled"        = "true"
@@ -221,7 +221,7 @@ module "subnet_11" {
   cidr_block              = "172.31.16.0/20"
   map_public_ip_on_launch = true
   vpc_id                  = module.vpc_1.id
-  az                      = "use1-az4"
+  az                      = "us-east-1d"
 }
 
 module "subnet_12" {
@@ -229,7 +229,7 @@ module "subnet_12" {
   cidr_block              = "192.168.64.0/19"
   map_public_ip_on_launch = true
   vpc_id                  = module.vpc_3.id
-  az                      = "use1-az2"
+  az                      = "us-east-1c"
   tags = {
     "alpha.eksctl.io/cluster-oidc-enabled"        = "true"
     "aws:cloudformation:stack-id"                 = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburr-eks-cluster/b3e45610-a251-11ed-8758-1297053ce6d9"
@@ -248,7 +248,7 @@ module "subnet_13" {
   cidr_block              = "192.168.32.0/19"
   map_public_ip_on_launch = true
   vpc_id                  = module.vpc_3.id
-  az                      = "use1-az1"
+  az                      = "us-east-1b"
   tags = {
     "Name"                                        = "eksctl-kaiburr-eks-cluster/SubnetPublicUSEAST1B"
     "alpha.eksctl.io/cluster-oidc-enabled"        = "true"
@@ -267,7 +267,7 @@ module "subnet_14" {
   cidr_block              = "192.168.0.0/19"
   map_public_ip_on_launch = true
   vpc_id                  = module.vpc_4.id
-  az                      = "use1-az6"
+  az                      = "us-east-1a"
   tags = {
     "aws:cloudformation:logical-id"               = "SubnetPublicUSEAST1A"
     "aws:cloudformation:stack-name"               = "eksctl-kaiburrEks-cluster"
@@ -286,7 +286,7 @@ module "subnet_15" {
   cidr_block              = "192.168.128.0/19"
   map_public_ip_on_launch = false
   vpc_id                  = module.vpc_2.id
-  az                      = "use1-az1"
+  az                      = "us-east-1b"
   tags = {
     "eksctl.cluster.k8s.io/v1alpha1/cluster-name" = "kaiburr-cluster"
     "aws:cloudformation:stack-id"                 = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburr-cluster-cluster/ac75a270-a70c-11ed-9155-12447c80f821"
@@ -305,7 +305,7 @@ module "subnet_16" {
   cidr_block              = "172.31.0.0/20"
   map_public_ip_on_launch = true
   vpc_id                  = module.vpc_1.id
-  az                      = "use1-az1"
+  az                      = "us-east-1b"
 }
 
 module "subnet_17" {
@@ -313,7 +313,7 @@ module "subnet_17" {
   cidr_block              = "192.168.96.0/19"
   map_public_ip_on_launch = false
   vpc_id                  = module.vpc_3.id
-  az                      = "use1-az6"
+  az                      = "us-east-1a"
   tags = {
     "aws:cloudformation:logical-id"               = "SubnetPrivateUSEAST1A"
     "alpha.eksctl.io/cluster-oidc-enabled"        = "true"
@@ -332,7 +332,7 @@ module "subnet_18" {
   cidr_block              = "172.31.64.0/20"
   map_public_ip_on_launch = true
   vpc_id                  = module.vpc_1.id
-  az                      = "use1-az5"
+  az                      = "us-east-1f"
 }
 
 module "subnet_19" {
@@ -340,7 +340,7 @@ module "subnet_19" {
   cidr_block              = "192.168.160.0/19"
   map_public_ip_on_launch = false
   vpc_id                  = module.vpc_3.id
-  az                      = "use1-az2"
+  az                      = "us-east-1c"
   tags = {
     "Name"                                        = "eksctl-kaiburr-eks-cluster/SubnetPrivateUSEAST1C"
     "aws:cloudformation:stack-name"               = "eksctl-kaiburr-eks-cluster"
@@ -359,7 +359,7 @@ module "subnet_20" {
   cidr_block              = "192.168.128.0/19"
   map_public_ip_on_launch = false
   vpc_id                  = module.vpc_3.id
-  az                      = "use1-az1"
+  az                      = "us-east-1b"
   tags = {
     "eksctl.cluster.k8s.io/v1alpha1/cluster-name" = "kaiburr-eks"
     "kubernetes.io/role/internal-elb"             = "1"
@@ -378,7 +378,7 @@ module "subnet_21" {
   cidr_block              = "192.168.64.0/19"
   map_public_ip_on_launch = true
   vpc_id                  = module.vpc_4.id
-  az                      = "use1-az2"
+  az                      = "us-east-1c"
   tags = {
     "alpha.eksctl.io/cluster-name"                = "kaiburrEks"
     "alpha.eksctl.io/eksctl-version"              = "0.127.0"
@@ -397,7 +397,7 @@ module "subnet_22" {
   cidr_block              = "192.168.96.0/19"
   map_public_ip_on_launch = false
   vpc_id                  = module.vpc_4.id
-  az                      = "use1-az6"
+  az                      = "us-east-1a"
   tags = {
     "kubernetes.io/role/internal-elb"             = "1"
     "alpha.eksctl.io/cluster-name"                = "kaiburrEks"
@@ -416,7 +416,7 @@ module "subnet_23" {
   cidr_block              = "172.31.48.0/20"
   map_public_ip_on_launch = true
   vpc_id                  = module.vpc_1.id
-  az                      = "use1-az3"
+  az                      = "us-east-1e"
 }
 
 module "subnet_24" {
@@ -424,7 +424,7 @@ module "subnet_24" {
   cidr_block              = "192.168.0.0/19"
   map_public_ip_on_launch = true
   vpc_id                  = module.vpc_2.id
-  az                      = "use1-az6"
+  az                      = "us-east-1a"
   tags = {
     "aws:cloudformation:stack-id"                 = "arn:aws:cloudformation:us-east-1:164416580421:stack/eksctl-kaiburr-cluster-cluster/ac75a270-a70c-11ed-9155-12447c80f821"
     "Name"                                        = "eksctl-kaiburr-cluster-cluster/SubnetPublicUSEAST1A"

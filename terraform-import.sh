@@ -26,11 +26,11 @@ terraform import module.subnet_21.aws_subnet.subnet subnet-02be2e5a15db5f53b
 terraform import module.subnet_22.aws_subnet.subnet subnet-08e5d4685fea3bd4b
 terraform import module.subnet_23.aws_subnet.subnet subnet-db518bea
 terraform import module.subnet_24.aws_subnet.subnet subnet-06922b7e140c164fb
-terraform import module.nat_gateway_1.aws_eip.nat_eip 3.214.221.186
+terraform import module.nat_gateway_1.aws_eip.nat_eip eipalloc-02911094d73485190
 terraform import module.nat_gateway_1.aws_nat_gateway.nat nat-03124bae3c96ec462
-terraform import module.nat_gateway_2.aws_eip.nat_eip 23.21.65.107
+terraform import module.nat_gateway_2.aws_eip.nat_eip eipalloc-02db08958733335e8
 terraform import module.nat_gateway_2.aws_nat_gateway.nat nat-0f36b6713b247696a
-terraform import module.nat_gateway_3.aws_eip.nat_eip 54.146.204.41
+terraform import module.nat_gateway_3.aws_eip.nat_eip eipalloc-0494c690c318de51a
 terraform import module.nat_gateway_3.aws_nat_gateway.nat nat-05cd4bbaadf4d0d59
 terraform import module.internet_gateway_1.aws_internet_gateway.igw igw-0215bdec00ad5feab
 terraform import module.internet_gateway_2.aws_internet_gateway.igw igw-028572ac3629d2854
