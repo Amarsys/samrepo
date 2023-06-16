@@ -1,3 +1,0 @@
-terraform import module.nat_route_table_17.aws_route_table.route_table rtb-0d95fc94900a4a175
-terraform import module.igw_route_table_2.aws_route_table.route_table rtb-0b208019ff38cd799
-terraform import module.igw_route_table_3.aws_route_table.route_table rtb-042c633b40617bee3
