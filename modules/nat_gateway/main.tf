@@ -1,6 +1,6 @@
 # Elastic IP for NAT Gateway
 resource "aws_eip" "nat_eip" {
-  vpc = true
+  domain = vpc
 }
 
 resource "aws_nat_gateway" "nat" {
