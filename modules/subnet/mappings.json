@@ -29,7 +29,7 @@
     "moduleName": "subnet",
     "variableName": "az",
     "type": "Subnet",
-    "mappingFieldName": "availabilityZoneId",
+    "mappingFieldName": "availabilityZone",
     "isReferenceVariable": false,
     "isRootModuleEnabled": true
 ],
