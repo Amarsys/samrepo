@@ -46,6 +46,6 @@
   "type": "RouteTable",
   "moduleRefs": ["routeTableId"],
   "resourceLogicalMapping": [
-    "aws_route_table_association.route_table_association": ["associations.subnetId", "/", "routeTableId"]
+    "aws_route_table_association.route_table_association": "associationId"
   ]
 ]]
