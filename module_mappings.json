@@ -1,4 +1,18 @@
 [[
+  "moduleName": "vpc",
+  "type": "Vpc", 
+  "moduleRefs": ["vpcId"],
+  "resourceLogicalMapping": [
+    "aws_vpc.vpc": "vpcId"
+  ]
+],[
+  "moduleName": "subnet",
+  "type": "Subnet",
+  "moduleRefs": ["subnetId"],
+  "resourceLogicalMapping": [
+    "aws_subnet.subnet": "subnetId"
+  ]
+],[
   "moduleName": "route_table_association",
   "type": "RouteTable",
   "moduleRefs": ["routeTableId"],
