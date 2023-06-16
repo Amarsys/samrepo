@@ -22,5 +22,13 @@
         "referenceKey": "route_table_id",
         "isMandatoryVariable": true,
         "isRootModuleEnabled": true
+    ],
+    [
+        "moduleName": "route_table_association",
+        "variableName": "aws_route_table_association.route_table_association",
+        "type": "RouteTable",
+        "mappingFieldName": "associationId",
+        "isReferenceVariable": false,
+        "isRootModuleEnabled": false
     ]
 ]
