@@ -1,4 +1,47 @@
 [[
+  "moduleName": "vpc",
+  "type": "Vpc", 
+  "moduleRefs": ["vpcId"],
+  "resourceLogicalMapping": [
+    "aws_vpc.vpc": "vpcId"
+  ]
+],[
+  "moduleName": "subnet",
+  "type": "Subnet",
+  "moduleRefs": ["subnetId"],
+  "resourceLogicalMapping": [
+    "aws_subnet.subnet": "subnetId"
+  ]
+],[
+  "moduleName": "nat_gateway",
+  "type": "NatGateway",
+  "moduleRefs": ["natGatewayId"],
+  "resourceLogicalMapping": [
+    "aws_eip.nat_eip": "public_ip",
+    "aws_nat_gateway.nat": "natGatewayId"
+  ]
+],[
+  "moduleName": "internet_gateway",
+  "type": "InternetGateway",
+  "moduleRefs": ["internetGatewayId"],
+  "resourceLogicalMapping": [
+    "aws_internet_gateway.igw": "internetGatewayId"
+  ]
+],[
+  "moduleName": "nat_route_table",
+  "type": "RouteTable",
+  "moduleRefs": ["routeTableId"],
+  "resourceLogicalMapping": [
+    "aws_route_table.route_table": "routeTableId"
+  ]
+],[
+  "moduleName": "igw_route_table",
+  "type": "RouteTable",
+  "moduleRefs": ["routeTableId"],
+  "resourceLogicalMapping": [
+    "aws_route_table.route_table": "routeTableId"
+  ]
+],[
   "moduleName": "route_table_association",
   "type": "RouteTable",
   "moduleRefs": ["routeTableId"],
