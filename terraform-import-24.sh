@@ -1,0 +1,1 @@
+terraform import module.route_table_association_20.aws_route_table_association.route_table_association[\"subnet_1\"] subnet-05dd600368666de8e/rtb-0d95fc94900a4a175
