@@ -1,0 +1,39 @@
+module "nat_route_table_rtb-0d95fc94900a4a175" {
+ source ="./modules/nat_route_table"
+  nat_gateway_id = module.nat_gateway_nat-05cd4bbaadf4d0d59.id
+  vpc_id         = module.vpc_vpc-07452964709d9cc87.id
+  tags           = {
+    "alpha.eksctl.io/cluster-name" = "kaiburr-eks"
+    "alpha.eksctl.io/eksctl-version" = "0.127.0"
+    "alpha.eksctl.io/cluster-oidc-enabled" = "true"
+    "Name" = "eksctl-kaiburr-eks-cluster/PrivateRouteTableUSEAST1B"
+    "eksctl.cluster.k8s.io/v1alpha1/cluster-name" = "kaiburr-eks"
+  }
+}
+
+module "igw_route_table_rtb-0b208019ff38cd799" {
+ source ="./modules/igw_route_table"
+  vpc_id     = module.vpc_vpc-07452964709d9cc87.id
+  gateway_id = module.internet_gateway_igw-0215bdec00ad5feab.igw_id
+  tags       = {
+    "alpha.eksctl.io/cluster-name" = "kaiburr-eks"
+    "alpha.eksctl.io/eksctl-version" = "0.127.0"
+    "Name" = "eksctl-kaiburr-eks-cluster/PublicRouteTable"
+    "eksctl.cluster.k8s.io/v1alpha1/cluster-name" = "kaiburr-eks"
+    "alpha.eksctl.io/cluster-oidc-enabled" = "true"
+  }
+}
+
+module "igw_route_table_rtb-042c633b40617bee3" {
+ source ="./modules/igw_route_table"
+  vpc_id     = module.vpc_vpc-0a18e3337585e7f2d.id
+  gateway_id = module.internet_gateway_igw-0e65dd3b705aa4069.igw_id
+  tags       = {
+    "alpha.eksctl.io/cluster-name" = "kaiburrEks"
+    "alpha.eksctl.io/eksctl-version" = "0.127.0"
+    "eksctl.cluster.k8s.io/v1alpha1/cluster-name" = "kaiburrEks"
+    "alpha.eksctl.io/cluster-oidc-enabled" = "true"
+    "Name" = "eksctl-kaiburrEks-cluster/PublicRouteTable"
+  }
+}
+
