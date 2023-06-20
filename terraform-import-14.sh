@@ -1,0 +1,3 @@
+terraform import module.internet_gateway_igw-0215bdec00ad5feab.aws_internet_gateway.igw igw-0215bdec00ad5feab
+terraform import module.internet_gateway_igw-028572ac3629d2854.aws_internet_gateway.igw igw-028572ac3629d2854
+terraform import module.internet_gateway_igw-028f77b5e07ff6dbd.aws_internet_gateway.igw igw-028f77b5e07ff6dbd
