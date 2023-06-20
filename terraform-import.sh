@@ -4,8 +4,8 @@ terraform import module.vpc_vpc-07452964709d9cc87.aws_vpc.vpc vpc-07452964709d9c
 terraform import module.vpc_vpc-01824193402915c0a.aws_vpc.vpc vpc-01824193402915c0a
 terraform import module.vpc_vpc-0a18e3337585e7f2d.aws_vpc.vpc vpc-0a18e3337585e7f2d
 terraform import module.subnet_subnet-07e509d5bbeb86ee3.aws_subnet.subnet subnet-07e509d5bbeb86ee3
-terraform import module.subnet_subnet-092a04285bc3f6c83.aws_subnet.subnet subnet-092a04285bc3f6c83
 terraform import module.subnet_subnet-0f6c1a37a7c2ae9ba.aws_subnet.subnet subnet-0f6c1a37a7c2ae9ba
+terraform import module.subnet_subnet-092a04285bc3f6c83.aws_subnet.subnet subnet-092a04285bc3f6c83
 terraform import module.subnet_subnet-0e643c573c7daeac7.aws_subnet.subnet subnet-0e643c573c7daeac7
 terraform import module.subnet_subnet-03385fcee5457b536.aws_subnet.subnet subnet-03385fcee5457b536
 terraform import module.subnet_subnet-0fc0d7d547dade1dc.aws_subnet.subnet subnet-0fc0d7d547dade1dc

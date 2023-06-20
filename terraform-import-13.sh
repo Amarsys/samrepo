@@ -1,5 +1,0 @@
-terraform import module.nat_gateway_nat-05cd4bbaadf4d0d59.aws_eip.nat_eip eipalloc-0494c690c318de51a
-terraform import module.nat_gateway_nat-05cd4bbaadf4d0d59.aws_nat_gateway.nat nat-05cd4bbaadf4d0d59
-terraform import module.nat_gateway_nat-00a0fb1e11af07e01.aws_eip.nat_eip eipalloc-04f53bc9d4977739a
-terraform import module.nat_gateway_nat-00a0fb1e11af07e01.aws_nat_gateway.nat nat-00a0fb1e11af07e01
-terraform import module.internet_gateway_igw-0215bdec00ad5feab.aws_internet_gateway.igw igw-0215bdec00ad5feab

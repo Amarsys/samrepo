@@ -1,3 +1,0 @@
-terraform import module.igw_route_table_rtb-06219139d4aca6dbd.aws_route_table.route_table rtb-06219139d4aca6dbd
-terraform import module.igw_route_table_rtb-0909ca83f4c3f313a.aws_route_table.route_table rtb-0909ca83f4c3f313a
-terraform import module.route_table_association_rtb-0f402c5143c95eb75.aws_route_table_association.route_table_association[\"subnet_1\"] subnet-0777c89717e03b99a/rtb-0f402c5143c95eb75
