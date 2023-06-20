@@ -1,9 +1,7 @@
 [
     [
-        "moduleName": "internet_gateway",
         "variableName": "vpc_id",
-        "type": "InternetGateway",
-        "mappingFieldName": "attachments.vpcId",
+        "mappingFieldName": "override",
         "isReferenceVariable": true,
         "mappingModuleName": "vpc",
         "mappingModuleRef": "vpcId",
@@ -17,9 +15,7 @@
         ]
     ],
     [
-        "moduleName": "internet_gateway",
         "variableName": "tags",
-        "type": "InternetGateway",
         "mappingFieldName": "tags",
         "isReferenceVariable": false,
         "isRootModuleEnabled": true

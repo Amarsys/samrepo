@@ -1,8 +1,6 @@
 [
     [
-        "moduleName": "igw_route_table",
         "variableName": "vpc_id",
-        "type": "RouteTable",
         "mappingFieldName": "vpcId",
         "isReferenceVariable": true,
         "mappingModuleName": "vpc",
@@ -12,10 +10,8 @@
         "isRootModuleEnabled": true
     ],
     [
-        "moduleName": "igw_route_table",
         "variableName": "gateway_id",
-        "type": "RouteTable",
-        "mappingFieldName": "internetGatewayId",
+        "mappingFieldName": "override",
         "isReferenceVariable": true,
         "mappingModuleName": "internet_gateway",
         "mappingModuleRef": "internetGatewayId",
@@ -25,14 +21,12 @@
         "templateDefinitions": [
             "templateId": "1",
             "loopThrough": "routes",
-            "containsField": "natGatewayId",
+            "containsField": "gatewayId",
             "startsWith": "igw-"
         ]
     ],
     [
-        "moduleName": "igw_route_table",
         "variableName": "tags",
-        "type": "RouteTable",
         "mappingFieldName": "tags",
         "isReferenceVariable": false,
         "isRootModuleEnabled": true

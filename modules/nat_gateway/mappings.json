@@ -1,8 +1,6 @@
 [
     [
-        "moduleName": "nat_gateway",
         "variableName": "subnet_id",
-        "type": "NatGateway",
         "mappingFieldName": "subnetId",
         "isReferenceVariable": true,
         "mappingModuleName": "subnet",
@@ -11,17 +9,19 @@
         "isRootModuleEnabled": true
     ],
     [
-        "moduleName": "nat_gateway",
         "variableName": "aws_eip.nat_eip",
-        "type": "NatGateway",
-        "mappingFieldName": "publicIp",
+        "mappingFieldName": "override",
         "isReferenceVariable": false,
-        "isRootModuleEnabled": false
+        "isRootModuleEnabled": false,
+        "templateDefinitions": [
+            "templateId": "1",
+            "loopThrough": "natGatewayAddresses",
+            "containsField": "allocationId",
+            "startsWith": ""
+        ]
     ],
     [
-        "moduleName": "nat_gateway",
         "variableName": "tags",
-        "type": "NatGateway",
         "mappingFieldName": "tags",
         "isReferenceVariable": false,
         "isRootModuleEnabled": true

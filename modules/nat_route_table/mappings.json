@@ -1,9 +1,7 @@
 [
     [
-        "moduleName": "nat_route_table",
         "variableName": "nat_gateway_id",
-        "type": "RouteTable",
-        "mappingFieldName": "natGatewayId",
+        "mappingFieldName": "override",
         "isReferenceVariable": true,
         "mappingModuleName": "nat_gateway",
         "mappingModuleRef": "natGatewayId",
@@ -18,9 +16,7 @@
         ]
     ],
     [
-        "moduleName": "nat_route_table",
         "variableName": "vpc_id",
-        "type": "RouteTable",
         "mappingFieldName": "vpcId",
         "isReferenceVariable": true,
         "mappingModuleName": "vpc",
@@ -30,9 +26,7 @@
         "isRootModuleEnabled": true
     ],
     [
-        "moduleName": "nat_route_table",
         "variableName": "tags",
-        "type": "RouteTable",
         "mappingFieldName": "tags",
         "isReferenceVariable": false,
         "isRootModuleEnabled": true

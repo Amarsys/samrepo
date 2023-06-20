@@ -1,15 +1,29 @@
 [[
-    "moduleName": "vpc",
     "variableName": "vpc_cidr",
-    "type": "Vpc",
     "mappingFieldName": "cidrBlock",
     "isReferenceVariable": false,
     "isRootModuleEnabled": true
 ],
 [
-    "moduleName": "vpc",
+    "variableName": "enable_dns_support",
+    "mappingFieldName": "override",
+    "isReferenceVariable": false,
+    "isRootModuleEnabled": true,
+    "templateDefinitions": [
+        "templateId": "3"
+    ]
+],
+[
+    "variableName": "enable_dns_hostnames",
+    "mappingFieldName": "override",
+    "isReferenceVariable": false,
+    "isRootModuleEnabled": true,
+    "templateDefinitions": [
+        "templateId": "3"
+    ]
+],
+[
     "variableName": "tags",
-    "type": "Vpc",
     "mappingFieldName": "tags",
     "isReferenceVariable": false,
     "isRootModuleEnabled": true
