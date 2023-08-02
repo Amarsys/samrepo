@@ -207,8 +207,6 @@ module "route_table_rtb-0f6ca3beb1533a60d" {
       "vpcPeeringConnectionId" = "pcx-07ae88bafc43ea60e"
     },
     {
-    },
-    {
       "destinationCidrBlock" = "0.0.0.0/0"
       "natGatewayId"         = "nat-01b8ab26778951cf4"
     }
@@ -230,8 +228,6 @@ module "route_table_rtb-0be60bded8a0c01bb" {
       "vpcPeeringConnectionId" = "pcx-07ae88bafc43ea60e"
     },
     {
-    },
-    {
       "destinationCidrBlock" = "0.0.0.0/0"
       "natGatewayId"         = "nat-0e41a84966e44b062"
     }
@@ -249,8 +245,6 @@ module "route_table_rtb-0e5fcbe7ecd2ca2a7" {
   source = "./modules/route_table"
   routes = [
     {
-    },
-    {
       "destinationCidrBlock" = "0.0.0.0/0"
       "gatewayId"            = "igw-0c9701fee0c8f47a8"
     }
@@ -264,8 +258,6 @@ module "route_table_rtb-06c4a26d3327b6ec0" {
     {
       "destinationCidrBlock"   = "10.220.0.0/16"
       "vpcPeeringConnectionId" = "pcx-07ae88bafc43ea60e"
-    },
-    {
     },
     {
       "destinationCidrBlock" = "0.0.0.0/0"
@@ -283,18 +275,12 @@ module "route_table_rtb-06c4a26d3327b6ec0" {
 
 module "route_table_rtb-0e48de685c3c4ac83" {
   source = "./modules/route_table"
-  routes = [
-    {
-    }
-  ]
   vpc_id = module.vpc_vpc-040873ce6d24dfd97.id
 }
 
 module "route_table_rtb-0ea77514b722cf99c" {
   source = "./modules/route_table"
   routes = [
-    {
-    },
     {
       "destinationCidrBlock" = "0.0.0.0/0"
       "gatewayId"            = "igw-04d860a3cfd672f23"
