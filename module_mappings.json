@@ -9,7 +9,7 @@
   ]
 ],
   [
-  "moduleName": "nat_route_table",
+  "moduleName": "route_table",
   "type": "RouteTable",
   "identifier": "routeTableId",
   "moduleRefs": ["routeTableId"],
