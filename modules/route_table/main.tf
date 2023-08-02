@@ -3,7 +3,7 @@ resource "aws_route_table" "route_table" {
     dynamic "route" {
     for_each = var.routes
     content {
-      carrier_gateway_id = lookup(route.value, "CarrierGatewayId", null)
+      carrier_gateway_id = lookup(route.value, "carrierGatewayId", null)
       cidr_block = lookup(route.value, "destinationCidrBlock", null)
       core_network_arn = lookup(route.value, "core_network_arn", null)
       destination_prefix_list_id = lookup(route.value, "destinationPrefixListId", null)
