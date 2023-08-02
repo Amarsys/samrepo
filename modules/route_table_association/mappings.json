@@ -16,7 +16,7 @@
         "variableName": "route_table_id",
         "mappingFieldName": "routeTableId",
         "isReferenceVariable": true,
-        "mappingModuleName": "nat_route_table",
+        "mappingModuleName": "route_table",
         "mappingModuleRef": "routeTableId",
         "referenceKey": "route_table_id",
         "isMandatoryVariable": true,
