@@ -21,10 +21,10 @@
         "isReferenceVariable": false,
         "isRootModuleEnabled": true,
         "templateDefinitions": [
-        "templateId": "1",
-        "loopThrough": "routes",
-        "containsField": "natGatewayId",
-        "startsWith": "nat-"
+            "templateId": "1",
+            "loopThrough": "routes",
+            "containsField": "natGatewayId",
+            "startsWith": "nat-"
     ]
     ],
     [
