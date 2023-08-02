@@ -16,6 +16,18 @@
         ]
     ],
     [
+        "variableName": "routes",
+        "mappingFieldName": "override",
+        "isReferenceVariable": false,
+        "isRootModuleEnabled": true,
+        "templateDefinitions": [
+            "templateId": "1",
+            "loopThrough": "routes",
+            "containsField": "natGatewayId",
+            "startsWith": "nat-"
+        ]
+    ],
+    [
         "variableName": "vpc_id",
         "mappingFieldName": "vpcId",
         "isReferenceVariable": true,
