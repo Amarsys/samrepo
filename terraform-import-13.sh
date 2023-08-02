@@ -1,0 +1,6 @@
+terraform import module.nat_gateway_nat-0e41a84966e44b062.aws_eip.nat_eip eipalloc-07e292e547e05ecb0
+terraform import module.nat_gateway_nat-0e41a84966e44b062.aws_nat_gateway.nat nat-0e41a84966e44b062
+terraform import module.nat_gateway_nat-089f7e7225591efe2.aws_eip.nat_eip eipalloc-0ba5afa2521f91cd1
+terraform import module.nat_gateway_nat-089f7e7225591efe2.aws_nat_gateway.nat nat-089f7e7225591efe2
+terraform import module.nat_gateway_nat-009a3b090e7e1b2e4.aws_eip.nat_eip eipalloc-028061ffc084cfd7a
+terraform import module.nat_gateway_nat-009a3b090e7e1b2e4.aws_nat_gateway.nat nat-009a3b090e7e1b2e4
