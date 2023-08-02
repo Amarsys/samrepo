@@ -8,6 +8,15 @@
   ]
 ],
   [
+    "moduleName": "subnet",
+    "type": "Subnet",
+    "identifier": "subnetId",
+    "moduleRefs": ["subnetId"],
+    "resourceLogicalMapping": [
+    "aws_subnet.subnet": "subnetId"
+  ]
+],
+  [
   "moduleName": "nat_gateway",
   "type": "NatGateway",
   "identifier": "natGatewayId",
@@ -18,11 +27,29 @@
   ]
 ],
   [
+    "moduleName": "internet_gateway",
+    "type": "InternetGateway",
+    "identifier": "internetGatewayId",
+    "moduleRefs": ["internetGatewayId"],
+    "resourceLogicalMapping": [
+    "aws_internet_gateway.igw": "internetGatewayId"
+  ]
+],
+  [
   "moduleName": "route_table",
   "type": "RouteTable",
   "identifier": "routeTableId",
   "moduleRefs": ["routeTableId"],
   "resourceLogicalMapping": [
     "aws_route_table.route_table": "routeTableId"
+  ]
+],
+  [
+    "moduleName": "route_table_association",
+    "type": "RouteTable",
+    "identifier": "routeTableId",
+    "moduleRefs": ["routeTableId"],
+    "resourceLogicalMapping": [
+    "aws_route_table_association.route_table_association": ["associations.subnetId", "/", "routeTableId"]
   ]
 ]]
