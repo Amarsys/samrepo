@@ -1,4 +1,13 @@
 [[
+  "moduleName": "vpc",
+  "type": "Vpc",
+  "identifier": "vpcId",
+  "moduleRefs": ["vpcId"],
+  "resourceLogicalMapping": [
+    "aws_vpc.vpc": "vpcId"
+  ]
+],
+  [
   "moduleName": "nat_gateway",
   "type": "NatGateway",
   "identifier": "natGatewayId",
