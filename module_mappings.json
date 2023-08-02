@@ -1,4 +1,14 @@
 [[
+  "moduleName": "nat_gateway",
+  "type": "NatGateway",
+  "identifier": "natGatewayId",
+  "moduleRefs": ["natGatewayId"],
+  "resourceLogicalMapping": [
+    "aws_eip.nat_eip": "public_ip",
+    "aws_nat_gateway.nat": "natGatewayId"
+  ]
+],
+  [
   "moduleName": "nat_route_table",
   "type": "RouteTable",
   "identifier": "routeTableId",
