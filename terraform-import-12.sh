@@ -1,5 +1,0 @@
-terraform import module.subnet_subnet-0fff9638667c0c847.aws_subnet.subnet subnet-0fff9638667c0c847
-terraform import module.nat_gateway_nat-01b8ab26778951cf4.aws_eip.nat_eip eipalloc-0992f29bd6e3f6f28
-terraform import module.nat_gateway_nat-01b8ab26778951cf4.aws_nat_gateway.nat nat-01b8ab26778951cf4
-terraform import module.nat_gateway_nat-01f77ad992a4c0171.aws_eip.nat_eip eipalloc-0c93f2ea3b47f0cce
-terraform import module.nat_gateway_nat-01f77ad992a4c0171.aws_nat_gateway.nat nat-01f77ad992a4c0171
