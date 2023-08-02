@@ -1,0 +1,3 @@
+terraform import module.subnet_subnet-02a33bec4362e3fc9.aws_subnet.subnet subnet-02a33bec4362e3fc9
+terraform import module.subnet_subnet-0fb1aff5e4d8be3b6.aws_subnet.subnet subnet-0fb1aff5e4d8be3b6
+terraform import module.subnet_subnet-0b94159f676d55002.aws_subnet.subnet subnet-0b94159f676d55002
