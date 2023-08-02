@@ -1,1 +1,0 @@
-terraform import module.route_table_rtb-02f9808799c81d725.aws_route_table.route_table rtb-02f9808799c81d725
