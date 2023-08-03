@@ -1,0 +1,4 @@
+terraform import module.route_table_association_rtb-06c4a26d3327b6ec0.aws_route_table_association.route_table_association[\"subnet_1\"] subnet-0182aa467d8e9fdc4/rtb-06c4a26d3327b6ec0
+terraform import module.route_table_association_rtb-0ea77514b722cf99c.aws_route_table_association.route_table_association[\"subnet_1\"] subnet-0d2fa7f51fa90f14e/rtb-0ea77514b722cf99c
+terraform import module.route_table_association_rtb-0ea77514b722cf99c.aws_route_table_association.route_table_association[\"subnet_2\"] subnet-0e4ecbe4a83269b14/rtb-0ea77514b722cf99c
+terraform import module.route_table_association_rtb-0ea77514b722cf99c.aws_route_table_association.route_table_association[\"subnet_3\"] subnet-0c91b0a51ebaa32a8/rtb-0ea77514b722cf99c
