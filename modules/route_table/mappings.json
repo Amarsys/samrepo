@@ -2,8 +2,15 @@
     [
         "variableName": "routes",
         "mappingFieldName": "override",
-        "isReferenceVariable": false,
+        "isReferenceVariable": true,
         "isRootModuleEnabled": true,
+        "mappingFieldName": ["natGatewayId","gatewayId"],
+        "mappingModuleName": [
+            "natGatewayId": "nat_gateway",
+            "gatewayId": "internet_gateway"
+        ],
+        "mappingModuleRef": ["natGatewayId","gatewayId"],
+        "referenceKey": "id",
         "templateDefinitions": [
             "templateId": "1",
             "loopThrough": "routes",
