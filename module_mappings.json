@@ -29,8 +29,8 @@
   [
     "moduleName": "internet_gateway",
     "type": "InternetGateway",
-    "identifier": "internetGatewayId",
-    "moduleRefs": ["internetGatewayId"],
+    "identifier": "gatewayId",
+    "moduleRefs": ["gatewayId"],
     "resourceLogicalMapping": [
     "aws_internet_gateway.igw": "internetGatewayId"
   ]
