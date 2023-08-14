@@ -10,7 +10,10 @@
             "gatewayId": "internet_gateway"
         ],
         "mappingModuleRef": ["natGatewayId","gatewayId"],
-        "referenceKey": "id",
+        "referenceKey": [
+            "natGatewayId": "id",
+            "gatewayId": "igw_id"
+        ],
         "templateDefinitions": [
             "templateId": "1",
             "loopThrough": "routes",
