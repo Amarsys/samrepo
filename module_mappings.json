@@ -52,4 +52,22 @@
     "resourceLogicalMapping": [
     "aws_route_table_association.route_table_association": ["associations.subnetId", "/", "routeTableId"]
   ]
+],
+  [
+  "moduleName": "iam_role",
+  "type": "Role",
+  "identifier": "roleId",
+  "moduleRefs": ["roleId"],
+  "resourceLogicalMapping": [
+    "aws_iam_role.iam_role": "roleId"
+  ]
+],
+  [
+  "moduleName": "iam_policy",
+  "type": "PolicyVersionWrapper",
+  "identifier": "policyId",
+  "moduleRefs": ["policyId"],
+  "resourceLogicalMapping": [
+    "aws_iam_policy.iam_policy": "policyId"
+  ]
 ]]
