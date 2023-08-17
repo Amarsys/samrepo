@@ -1,51 +1,51 @@
 [
-    {
-        "moduleName": "iam_role",
+    [
         "variableName": "role_name",
-        "type": "",
-        "mappingFieldName": "",
-        "get_value_from_module_output": false
-    },
-    {
-        "moduleName": "iam_role",
+        "mappingFieldName": "roleName",
+        "isReferenceVariable": false,
+        "isRootModuleEnabled": true
+    ],
+    [
         "variableName": "custom_policies",
-        "type": "",
-        "mappingFieldName": "",
-        "get_value_from_module_output": false
-    },
-    {
-        "moduleName": "iam_role",
+        "mappingFieldName": "override",
+        "isReferenceVariable": false,
+        "isRootModuleEnabled": true,
+        "templateDefinitions": [
+        "templateId": "4"
+        ]
+    ],
+    [
         "variableName": "managed_policy_arns",
-        "type": "",
-        "mappingFieldName": "",
-        "get_value_from_module_output": false
-    },
-    {
-        "moduleName": "iam_role",
+        "mappingFieldName": "override",
+        "isReferenceVariable": false,
+        "isRootModuleEnabled": true,
+        "templateDefinitions": [
+        "templateId": "4"
+        ]
+    ],
+    [
         "variableName": "assume_role_policy",
-        "type": "",
-        "mappingFieldName": "",
-        "get_value_from_module_output": false
-    },
-    {
-        "moduleName": "iam_role",
+        "mappingFieldName": "assumeRolePolicyDocument",
+        "isReferenceVariable": false,
+        "isRootModuleEnabled": true,
+        "isUrlEncoded": true
+    ],
+    [
         "variableName": "tags",
-        "type": "",
-        "mappingFieldName": "",
-        "get_value_from_module_output": false
-    },
-    {
-        "moduleName": "iam_role",
+        "mappingFieldName": "tags",
+        "isReferenceVariable": false,
+        "isRootModuleEnabled": true
+    ],
+    [
         "variableName": "description",
-        "type": "",
-        "mappingFieldName": "",
-        "get_value_from_module_output": false
-    },
-    {
-        "moduleName": "iam_role",
+        "mappingFieldName": "description",
+        "isReferenceVariable": false,
+        "isRootModuleEnabled": true
+    ],
+    [
         "variableName": "path",
-        "type": "",
-        "mappingFieldName": "",
-        "get_value_from_module_output": false
-    }
+        "mappingFieldName": "path",
+        "isReferenceVariable": false,
+        "isRootModuleEnabled": true
+    ]
 ]

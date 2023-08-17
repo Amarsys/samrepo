@@ -6,15 +6,17 @@
   "resourceLogicalMapping": [
     "aws_vpc.vpc": "vpcId"
   ]
-],[
-  "moduleName": "subnet",
-  "type": "Subnet",
-  "identifier": "subnetId",
-  "moduleRefs": ["subnetId"],
-  "resourceLogicalMapping": [
+],
+  [
+    "moduleName": "subnet",
+    "type": "Subnet",
+    "identifier": "subnetId",
+    "moduleRefs": ["subnetId"],
+    "resourceLogicalMapping": [
     "aws_subnet.subnet": "subnetId"
   ]
-],[
+],
+  [
   "moduleName": "nat_gateway",
   "type": "NatGateway",
   "identifier": "natGatewayId",
@@ -23,36 +25,49 @@
     "aws_eip.nat_eip": "public_ip",
     "aws_nat_gateway.nat": "natGatewayId"
   ]
-],[
-  "moduleName": "internet_gateway",
-  "type": "InternetGateway",
-  "identifier": "internetGatewayId",
-  "moduleRefs": ["internetGatewayId"],
-  "resourceLogicalMapping": [
+],
+  [
+    "moduleName": "internet_gateway",
+    "type": "InternetGateway",
+    "identifier": "internetGatewayId",
+    "moduleRefs": ["internetGatewayId"],
+    "resourceLogicalMapping": [
     "aws_internet_gateway.igw": "internetGatewayId"
   ]
-],[
-  "moduleName": "nat_route_table",
+],
+  [
+  "moduleName": "route_table",
   "type": "RouteTable",
   "identifier": "routeTableId",
   "moduleRefs": ["routeTableId"],
   "resourceLogicalMapping": [
     "aws_route_table.route_table": "routeTableId"
   ]
-],[
-  "moduleName": "igw_route_table",
-  "type": "RouteTable",
-  "identifier": "routeTableId",
-  "moduleRefs": ["routeTableId"],
-  "resourceLogicalMapping": [
-    "aws_route_table.route_table": "routeTableId"
-  ]
-],[
-  "moduleName": "route_table_association",
-  "type": "RouteTable",
-  "identifier": "routeTableId",
-  "moduleRefs": ["routeTableId"],
-  "resourceLogicalMapping": [
+],
+  [
+    "moduleName": "route_table_association",
+    "type": "RouteTable",
+    "identifier": "routeTableId",
+    "moduleRefs": ["routeTableId"],
+    "resourceLogicalMapping": [
     "aws_route_table_association.route_table_association": ["associations.subnetId", "/", "routeTableId"]
+  ]
+],
+  [
+  "moduleName": "iam_role",
+  "type": "Role",
+  "identifier": "roleId",
+  "moduleRefs": ["roleId"],
+  "resourceLogicalMapping": [
+    "aws_iam_role.iam_role": "roleId"
+  ]
+],
+  [
+  "moduleName": "iam_policy",
+  "type": "PolicyVersionWrapper",
+  "identifier": "policyId",
+  "moduleRefs": ["policyId"],
+  "resourceLogicalMapping": [
+    "aws_iam_policy.iam_policy": "policyId"
   ]
 ]]

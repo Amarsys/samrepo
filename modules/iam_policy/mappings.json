@@ -1,37 +1,33 @@
 [
-    {
-        "moduleName": "iam_policy",
+    [
         "variableName": "policy_name",
-        "type": "",
-        "mappingFieldName": "",
-        "get_value_from_module_output": false
-    },
-    {
-        "moduleName": "iam_policy",
+        "mappingFieldName": "policyName",
+        "isReferenceVariable": false,
+        "isRootModuleEnabled": true
+    ],
+    [
         "variableName": "custom_policy",
-        "type": "",
-        "mappingFieldName": "",
-        "get_value_from_module_output": false
-    },
-    {
-        "moduleName": "iam_policy",
+        "mappingFieldName": "policyVersion.document",
+        "isReferenceVariable": false,
+        "isRootModuleEnabled": true,
+        "isUrlEncoded": true
+    ],
+    [
         "variableName": "description",
-        "type": "",
-        "mappingFieldName": "",
-        "get_value_from_module_output": false
-    },
-    {
-        "moduleName": "iam_policy",
+        "mappingFieldName": "description",
+        "isReferenceVariable": false,
+        "isRootModuleEnabled": true
+    ],
+    [
         "variableName": "path",
-        "type": "",
-        "mappingFieldName": "",
-        "get_value_from_module_output": false
-    },
-    {
-        "moduleName": "iam_policy",
+        "mappingFieldName": "path",
+        "isReferenceVariable": false,
+        "isRootModuleEnabled": true
+    ],
+    [
         "variableName": "tags",
-        "type": "",
-        "mappingFieldName": "",
-        "get_value_from_module_output": false
-    }
+        "mappingFieldName": "tags",
+        "isReferenceVariable": false,
+        "isRootModuleEnabled": true
+    ]
 ]

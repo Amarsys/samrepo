@@ -9,7 +9,10 @@ variable "vpc_id" {
   description = "The VPC ID"
 }
 
-variable "nat_gateway_id" {
-  type        = string
-  description = "Identifier of a VPC NAT gateway"
+variable "routes" {
+  description = "List of dynamic routes to be added to the route table."
+  type        = list(map(string))
+  default     = [
+
+  ]
 }
