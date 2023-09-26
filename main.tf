@@ -18,6 +18,7 @@ module "vpc_vpc-040873ce6d24dfd97" {
   }
 }
 
+
 module "subnet_subnet-0644cb7c5481a6d9e" {
   source                  = "./modules/subnet"
   cidr_block              = "172.31.64.0/20"
@@ -329,3 +330,9 @@ module "route_table_association_rtb-0ea77514b722cf99c" {
   route_table_id = module.route_table_rtb-0ea77514b722cf99c.route_table_id
 }
 
+module "ecs_cluster" {
+  source = "./cloudply/ecs_cluster"
+  project_name = "your_project_name" # Replace with your project name
+  environment = "Dev"
+  # Add other variables as needed for the ECS cluster module
+}
